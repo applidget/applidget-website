@@ -3,3 +3,5 @@ releases
 tmp/
 config/deploy.yml
 public/.sass-cache/
+public/stylesheets/bootstrap.css
+public/stylesheets/bootstrap-responsive.css

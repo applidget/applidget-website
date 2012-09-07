@@ -8,11 +8,10 @@ site:
 
   pages:
     - "index": # page path (the template can edited here app/views/pages/index.liquid)
-      title: "Home"
       published: true
-    - "spirit":
-      title: "Spirit"
+    - "what_we_do":
+      published: true
+    - "technologies":
       published: true
     - "404":
-      title: "404 - Page not found"
       published: true
