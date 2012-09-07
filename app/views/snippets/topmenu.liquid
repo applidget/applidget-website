@@ -6,7 +6,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a href="./" class="brand">Applidget</a>
+        <a href="./" class="brand">
+          {{ "applidget_logo_orange.png" | image_tag: "alt:Applidget" }}
+        </a>
       <div class="nav-collapse collapse">
         {% nav site, class: 'nav', active_class: 'active', bootstrap: true %}
       </div>
