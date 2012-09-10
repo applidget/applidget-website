@@ -20,17 +20,35 @@
   <body>
     
 
-    <div class="container">
+    <div class="container" id="nav">
 
       {% include 'topmenu' %}
+      
+    </div>
 
-      {% block 'main' %}
-
-      <!-- Put main stuff here -->
-
-      {% endblock %}
-
-    </div> <!-- /container -->
+    {% block 'main' %}
+      
+      <div class="jumbotron" id="we-make-web">
+        <div class="container">
+          <div class="row shadow-up v-bottom">
+            <div class="span12">
+              {{ "shadow-up.png" | image_tag }}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="span12">
+              <h1>
+              {% editable_short_text "we_make_web_apps_title", hint: "We make web and mobile apps", priority: 10 %}
+                We make web & mobile apps
+              {% endeditable_short_text %}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    {% endblock %}
 
     <!-- Le javascripts -->
     {{'jquery.min' | javascript_tag }}
