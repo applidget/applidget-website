@@ -55,9 +55,9 @@ $image-list: (contact, blogs, jobs, follow, technologies, spirit);  // TODO(ssau
   display: block;
   margin: auto;
   margin-bottom: 12px;
-  border: 4px solid rgb(249,249,249);
+  border: 4px solid #E4E4E4;
   text-indent: -9999px;
-  @include border-radius(6px);
+  @include border-radius(10px);
 }
 
 .stickers-sprite:hover {
@@ -95,6 +95,8 @@ body {
 $grey: #3d3d3d;
 
 .v-bottom { vertical-align: bottom; }
+.light-orange { color: #d64727; }
+.bold-grey { color: #464646; }
 
 // Top navigation menu
 #main-navbar {
@@ -148,13 +150,6 @@ $grey: #3d3d3d;
     line-height: 1;
     margin-top: 40px;
     margin-bottom: 42px;
-  }
-  
-  p {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 30px;
   }
   
   a:hover {
@@ -220,8 +215,11 @@ $grey: #3d3d3d;
   background: url('/images/gradient-background-glow.png') repeat-y top center;
   
   p {
-   margin-top: 23px;
-   margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 23px;
+    margin-bottom: 35px;
   }
 
   .shadow-up {
@@ -232,6 +230,51 @@ $grey: #3d3d3d;
     position: absolute;
     bottom: -54px;
     width: 100%;
+  }
+}
+
+#what-we-do {
+  padding-top: 95px;
+  padding-bottom: 50px;
+  color: #464646;
+  line-height: 23px; 
+  text-shadow: 1px 1px 0px #FFF;
+  font-size: 0.9em;
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  h2, p { text-align: left; }
+
+  [class*="span"] {
+    img { margin-top: 50px; }
+  }
+
+  .white-glow-right {
+    background: url('/images/white-glow-right.png') no-repeat top left;
+    margin-top: 30px;
+    padding-top: 48px;
+    min-height: 240px; // background-image height - padding-top (288px - 40px)
+    text-align: left;
+
+    .specialties { 
+      color: #222;
+      padding-left: 24px;
+      font-size: 1.1em;
+    }
+
+    ul { 
+      list-style-image: url('/images/list-green-check.png'); 
+      padding-left: 3.5em;
+      margin-top: 12px;
+
+      li {
+        line-height: 2.5em;
+      }
+    }
   }
 }
 
@@ -261,6 +304,12 @@ $grey: #3d3d3d;
       bottom: -47px;
     }
   }
+
+  #what-we-do {
+    p {
+      font-size: 0.9em;
+    }
+  }
 }
 
 /* Tablet
@@ -268,12 +317,30 @@ $grey: #3d3d3d;
 @media (max-width: 767px) {
   .jumbotron {
     padding: 20px;
-    margin-top:   -20px; /* Offset bottom margin on .navbar */
-    margin-right: -20px;
-    margin-left:  -20px;
-    
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+
+  #we-make-web {
     h1 {
       font-size: 2.8em;
+    }
+  }
+
+  #what-we-do {
+    p {
+      font-size: 0.9em;
+    }
+
+    [class*="span"] {
+      img { 
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .white-glow-right {
+      margin-top: 0px;
+      padding-top: 30px;
     }
   }
 }
