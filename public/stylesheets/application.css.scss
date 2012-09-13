@@ -94,11 +94,14 @@ body {
 
 $grey: #3d3d3d;
 
+.v-bottom { vertical-align: bottom; }
+
 // Top navigation menu
 #main-navbar {
   font-family: 'museo500';
   color: $grey;
   font-size: 1.2em;
+  padding-bottom: 20px;
 
   .brand {
     margin-left: -40px; // Align applidget logo to the left side of the grid.
@@ -127,24 +130,6 @@ $grey: #3d3d3d;
   }
   .link.last a {
     padding-right: 0;
-  }
-}
-
-.container {
-  .shadow-up {
-    margin-top: -36px;
-  }
-  
-  .shadow-down {
-    position: absolute;
-    bottom: -54px;
-    width: 100%;
-  }
-  
-  .v-bottom {
-    img { 
-      vertical-align: bottom;
-    }
   }
 }
 
@@ -231,14 +216,22 @@ $grey: #3d3d3d;
   *background-color:#d54124;
 }
 
-#nav { padding-bottom: 20px; }
-
 #we-make-web {
   background: url('/images/gradient-background-glow.png') repeat-y top center;
   
   p {
    margin-top: 23px;
    margin-bottom: 35px;
+  }
+
+  .shadow-up {
+    margin-top: -36px;
+  }
+  
+  .shadow-down {
+    position: absolute;
+    bottom: -54px;
+    width: 100%;
   }
 }
 
@@ -263,7 +256,7 @@ $grey: #3d3d3d;
     }
   }
   
-  .container {
+  #we-make-web {
     .shadow-down {
       bottom: -47px;
     }
@@ -286,7 +279,7 @@ $grey: #3d3d3d;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .container {
+  #we-make-web {
     .shadow-down {
       bottom: -45px;
     }
@@ -306,7 +299,7 @@ $grey: #3d3d3d;
     }
   }
   
-  .container {
+  #we-make-web {
     .shadow-down {
       bottom: -40px;
     }
