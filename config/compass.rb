@@ -8,3 +8,4 @@ javascripts_dir   = 'javascripts'
 project_type      = :stand_alone
 output_style      = :nested
 line_comments     = false
+relative_assets   = true
