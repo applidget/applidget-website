@@ -1,0 +1,74 @@
+/* Defines CSS rules for Jumbotron Class */
+
+.jumbotron {
+  position: relative;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  
+  h1 {
+    color: #252525;
+    font-family: 'museo500';
+    font-size: 3.7em;
+    font-weight: normal;
+    line-height: 1;
+    margin-top: 40px;
+    margin-bottom: 42px;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .4;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .jumbotron {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+    
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron {
+    padding: 20px;
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+    
+    h1 {
+      font-size: 2.8em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .jumbotron {
+    padding: 0;
+    
+    h1 {
+      font-size: 2.3em;
+    }
+    
+    p, .btn-huge {
+      font-size: 20px;
+    }
+  }
+}
