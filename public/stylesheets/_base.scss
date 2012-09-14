@@ -2,7 +2,7 @@
 
 /* Common Variables */
 $grey: #3d3d3d;
-$image-list: (contact, blogs, jobs, follow, technologies, spirit);  // TODO(ssaunier): is there a way to retrieve this list programatically?
+$image-list: (applidget, blogs, contact, events, team, technologies);  // TODO(ssaunier): is there a way to retrieve this list programatically?
 
 /* Compass Modules Import */
 @import "compass/reset";
