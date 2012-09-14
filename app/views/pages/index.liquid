@@ -17,6 +17,8 @@
     {{ 'bootstrap.min' | stylesheet_tag }}
     {{ 'bootstrap-responsive.min.custom' | stylesheet_tag }}
     {{ 'application' | stylesheet_tag }}
+
+    {% inline_editor %}
   </head>
   <body>
     
@@ -33,7 +35,7 @@
         <div class="container">
           <div class="row shadow-up">
             <div class="span12">
-              <img src="images/shadow-up.png" class="v-bottom" />
+              <span class="v-bottom">{{ "shadow-up.png" | theme_image_tag }}</span>
             </div>
           </div>
           
@@ -72,7 +74,7 @@
           
           <div class="row shadow-down">
             <div class="span12">
-              <img src="images/shadow-down.png" />
+              {{ "shadow-down.png" | theme_image_tag }}
             </div>
           </div>
         </div>
@@ -82,7 +84,7 @@
         <div class="container">
           <div class="row">
             <div class="span4">
-              <img src="images/air-liquide-screenshot.png" />
+              {{ "air-liquide-screenshot.png" | theme_image_tag }}
             </div>
             <div class="span5">
               <h2>

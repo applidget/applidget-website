@@ -1,5 +1,6 @@
 .DS_Store
 releases
+.sass-cache/
 tmp/
 config/deploy.yml
 public/.sass-cache/
