@@ -42,7 +42,7 @@
           <div class="row">
             <div class="span12">
               <h1>
-              {% editable_short_text "we_make_web_apps_title", hint: "We make web and mobile apps", priority: 10 %}
+              {% editable_short_text "we_make_web_apps_title", hint: "We make web and mobile apps", priority: 100 %}
                 We make web & mobile apps
               {% endeditable_short_text %}
               </h1>
@@ -88,26 +88,32 @@
             </div>
             <div class="span5">
               <h2>
-              {% editable_short_text "why_choose_applidget_title", hint: "Why choose Applidget", priority: 15 %}
+              {% editable_short_text "why_choose_applidget_title", hint: "Why choose Applidget", priority: 97 %}
                 <span class="light-orange">Why choose</span> <span class="bold-grey">Applidget?</span>
               {% endeditable_short_text %}
               </h2>
               <p>
-              {% editable_short_text "why_choose_applidget_description", hint: "Why choose Applidget Description", priority: 20 %}
+              {% editable_long_text "why_choose_applidget_description", hint: "Why choose Applidget Description", priority: 96 %}
                 Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad principis castra multos coopertos paene catenis adduxit in squalorem deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque parabat carnifex et tormenta. et ex is proscripti sunt plures actique in exilium alii, non nullos gladii consumpsere poenales.
                 <br /><br />
                 Nec enim quisquam facile meminit sub Constantio, ubi susurro tenus haec movebantur, quemquam absolutum.
-              {% endeditable_short_text %}
+              {% endeditable_long_text %}
               </p>
             </div>
             <div class="span3">
               <div class="white-glow-right">
-                <span class="specialties">Our specialties:</span>
+                <span class="specialties">
+                  {% editable_short_text "specialties_title", hint: "Our Specialties", priority: 94 %}
+                    Our specialties:
+                  {% endeditable_short_text %}
+                </span>
                 <ul>
-                  <li>Ruby on Rails</li>
-                  <li>HTML5</li>
-                  <li>iOS</li>
-                  <li>Android</li>
+                  {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
+                    <li>Ruby on Rails</li>
+                    <li>HTML5</li>
+                    <li>iOS</li>
+                    <li>Android</li>
+                  {% endeditable_long_text %}
                 </ul>
               </div>
             </div>
