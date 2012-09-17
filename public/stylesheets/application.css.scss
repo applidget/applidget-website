@@ -214,14 +214,58 @@ body {
 }
 
 #section-event-solutions {
-  background: #eae4d6 url('/images/sunrise-effect-light.png') top center;
+  background: #eae4d6 url('/images/sunrise-effect-light.png') no-repeat top center;
   margin-top: 0px;
+  text-shadow: 1px 1px 3px #FFFFFF;
 
   h1 {
     text-align: left;
     color: #de0605;
-    text-shadow: 1px 1px 3px #FFFFFF;
     margin-top: 55px;
+  }
+
+  .info {
+    display: inline-block;
+    margin-bottom: 6px;
+    width: 100%;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    font-size: 1.4em;
+  }
+
+  .success {
+    background-color: #f3ffe0;
+    border: 1px solid #acd866;
+    @include border-radius(4px);
+    color: #579839;
+    
+  }
+
+  .yes, .maybe {
+    color: #707070;
+    border: 1px solid #909090;
+  }
+
+  .yes {
+    margin-bottom: -1px;
+    @include border-radius(4px 4px 0px 0px);
+    background-color:#d3d3d3;
+    *background-color:#d3d3d3;
+    @include background-image(linear-gradient(color-stops(#909090, #b1b1b1 15%, #d3d3d3)));
+    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ff909090',endColorstr='#ffd3d3d3',GradientType=0);
+    filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+    background-repeat:repeat-x;
+  }
+
+  .maybe {
+    @include border-radius(0px 0px 4px 4px);
+    background-color:#eeeeee;
+    *background-color:#eeeeee;
+    @include background-image(linear-gradient(color-stops(#eeeeee, #e5e5e5)));
+    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffeeeeee',endColorstr='#ffe5e5e5',GradientType=0);
+    filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+    background-repeat:repeat-x;
   }
 }
 
