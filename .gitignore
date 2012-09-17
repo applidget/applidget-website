@@ -1,9 +1,10 @@
 .DS_Store
 releases
+.sass-cache/
 tmp/
 config/deploy.yml
 public/.sass-cache/
 public/stylesheets/bootstrap.css
 public/stylesheets/bootstrap-responsive.css
-public/images/stickers-retina-s893d7a1edc.png
-public/images/stickers-s48d3d5a6b7.png
+public/images/stickers-retina-*.png
+public/images/stickers-*.png

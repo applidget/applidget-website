@@ -17,6 +17,8 @@
     {{ 'bootstrap.min' | stylesheet_tag }}
     {{ 'bootstrap-responsive.min.custom' | stylesheet_tag }}
     {{ 'application' | stylesheet_tag }}
+
+    {% inline_editor %}
   </head>
   <body>
     
@@ -33,14 +35,14 @@
         <div class="container">
           <div class="row shadow-up">
             <div class="span12">
-              <img src="images/shadow-up.png" class="v-bottom" />
+              <span class="v-bottom">{{ "shadow-up.png" | theme_image_tag }}</span>
             </div>
           </div>
           
           <div class="row">
             <div class="span12">
               <h1>
-              {% editable_short_text "we_make_web_apps_title", hint: "We make web and mobile apps", priority: 10 %}
+              {% editable_short_text "we_make_web_apps_title", hint: "We make web and mobile apps", priority: 100 %}
                 We make web & mobile apps
               {% endeditable_short_text %}
               </h1>
@@ -49,18 +51,18 @@
           
           <div class="row">
             <div class="span4">
-              <a href="#" class="stickers-sprite stickers-contact" rel="touch-sprite" data-selector="contact">Contact</a>
-              <a href="#" class="stickers-sprite stickers-blogs" rel="touch-sprite" data-selector="blogs">Blogs</a>
+              <a href="#" class="stickers-sprite stickers-applidget" rel="touch-sprite" data-selector="applidget">What We Do</a>
+              <a href="#" class="stickers-sprite stickers-events" rel="touch-sprite" data-selector="events">Events</a>
             </div>
             
             <div class="span4">
-              <a href="#" class="stickers-sprite stickers-jobs" rel="touch-sprite" data-selector="jobs">Jobs</a>
-              <a href="#" class="stickers-sprite stickers-follow" rel="touch-sprite" data-selector="follow">Follow Us</a>
+              <a href="#" class="stickers-sprite stickers-contact" rel="touch-sprite" data-selector="contact">Contact</a>
+              <a href="#" class="stickers-sprite stickers-team" rel="touch-sprite" data-selector="team">Team</a>
             </div>
             
             <div class="span4">
               <a href="#" class="stickers-sprite stickers-technologies" rel="touch-sprite" data-selector="technologies">Technologies</a>
-              <a href="#" class="stickers-sprite stickers-spirit" rel="touch-sprite" data-selector="spirit">Our Spirit</a>
+              <a href="#" class="stickers-sprite stickers-blogs" rel="touch-sprite" data-selector="blogs">Blogs</a>              
             </div>
           </div>
           
@@ -72,7 +74,48 @@
           
           <div class="row shadow-down">
             <div class="span12">
-              <img src="images/shadow-down.png" />
+              {{ "shadow-down.png" | theme_image_tag }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron" id="section-why-choose">
+        <div class="container">
+          <div class="row">
+            <div class="span4">
+              {{ "air-liquide-screenshot.png" | theme_image_tag }}
+            </div>
+            <div class="span5">
+              <h2>
+              {% editable_short_text "why_choose_applidget_title", hint: "Why choose Applidget", priority: 97 %}
+                <span class="light-orange">Why choose</span> <span class="bold-grey">Applidget?</span>
+              {% endeditable_short_text %}
+              </h2>
+              <p>
+              {% editable_long_text "why_choose_applidget_description", hint: "Why choose Applidget Description", priority: 96 %}
+                Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad principis castra multos coopertos paene catenis adduxit in squalorem deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque parabat carnifex et tormenta. et ex is proscripti sunt plures actique in exilium alii, non nullos gladii consumpsere poenales.
+                <br /><br />
+                Nec enim quisquam facile meminit sub Constantio, ubi susurro tenus haec movebantur, quemquam absolutum.
+              {% endeditable_long_text %}
+              </p>
+            </div>
+            <div class="span3">
+              <div class="white-glow-right">
+                <span class="specialties">
+                  {% editable_short_text "specialties_title", hint: "Our Specialties", priority: 94 %}
+                    Our specialties:
+                  {% endeditable_short_text %}
+                </span>
+                <ul>
+                  {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
+                    <li>Ruby on Rails</li>
+                    <li>HTML5</li>
+                    <li>iOS</li>
+                    <li>Android</li>
+                  {% endeditable_long_text %}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
