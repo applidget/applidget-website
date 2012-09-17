@@ -11,7 +11,6 @@ body {
 .light-orange { color: #d64727; }
 .bold-grey { color: #464646; }
 .center { text-align: center; }
-.bold { font-weight: bold; }
 .padding20 { padding: 20px; }
 
 // Top navigation menu
@@ -126,7 +125,7 @@ body {
 
   .white-glow-right {
     background: url('/images/white-glow-right.png') no-repeat top left;
-    margin-top: 30px;
+    margin-top: 12px;
     padding-top: 48px;
     min-height: 240px; // background-image height - padding-top (288px - 40px)
     text-align: left;
@@ -161,7 +160,7 @@ body {
     margin-top: 25px;
     margin-bottom: 30px;
   }
-  
+
   .section-description {
     margin-top: 20px;
     text-align: center;
@@ -183,20 +182,22 @@ body {
   [class*="span"] {
     background-color: #06336b;
     line-height: 1.7em;
-    min-height: 200px;
+    min-height: 210px;
     @include border-radius(4px);
     @include box-shadow(inset 0 0 7px #333333);
 
-    .list-title, .list-description { display: block; }
+    .section-title, .section-description { display: block; }
 
-    .list-title { 
+    .section-title { 
       font-weight: bold;
       padding-bottom: 7px;
     }
 
-    ul.list-description {
-      list-style-image: url('/images/list-white-check.png');
-      padding-left: 20px;
+    .section-description {
+      ul {
+        list-style-image: url('/images/list-white-check.png');
+        padding-left: 20px;
+      }
     }
   }
 }
@@ -223,6 +224,10 @@ body {
     p {
       font-size: 0.9em;
     }
+
+    .white-glow-right {
+      margin-top: 52px;
+    }
   }
 
   #section-technologies {
@@ -236,18 +241,12 @@ body {
       line-height: 1.5em;
       min-height: 220px;
       
-      .list-title, .list-description { font-size: 0.9em; }
+      .section-title, .section-description { font-size: 0.9em; }
     }
   }
 }
 
 @media (max-width: 767px) {
-  #section-stickers {
-    h1 {
-      font-size: 2.8em;
-    }
-  }
-
   #section-why-choose {
     padding-bottom: 5px;
 
@@ -279,7 +278,7 @@ body {
       min-height: inherit;
       margin-bottom: 10px;
 
-      .list-title, .list-description { font-size: 0.9em; }
+      .section-title, .section-description { font-size: 0.9em; }
     }
   }   
 }

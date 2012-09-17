@@ -106,14 +106,15 @@
                   {% editable_short_text "specialties_title", hint: "Our Specialties", priority: 94 %}
                     Our specialties:
                   {% endeditable_short_text %}
-                </span>
+                </span>                
+                {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
                 <ul>
-                  {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
-                    <li>Ruby on Rails</li>
-                    <li>HTML5</li>
-                    <li>iOS</li>
-                    <li>Android</li>
-                  {% endeditable_long_text %}
+                  <li>Ruby on Rails</li>
+                  <li>HTML5</li>
+                  <li>iOS</li>
+                  <li>Android</li>
+                </ul>
+                {% endeditable_long_text %}
                 </ul>
               </div>
             </div>
@@ -127,7 +128,7 @@
           <div class="row">
             <div class="span12">
               <h1>
-              {% editable_short_text "our_technologies_title", hint: "Our Technologies", priority: 90 %}
+              {% editable_short_text "our_technologies_title", hint: "Our Technologies Section Title", priority: 90 %}
                 Our Technologies
               {% endeditable_short_text %}
               </h1>
@@ -148,22 +149,32 @@
           <div class="row">
             <div class="span4">
               <div class="padding20">
-                <span class="list-title bold">We focus on:</span>
-                <ul class="list-description">
-                  {% editable_short_text "technologies_list", hint: "Technologies List", priority: 86 %}
-                    <li>Ruby on Rails</li>
-                    <li>HTML5</li>
-                    <li>iOS</li>
-                    <li>Android</li>
+                <span class="section-title">
+                  {% editable_short_text "technologies_bloc_1_title", hint: "Technologies Bloc 1 Title", priority: 87 %}
+                    We focus on:
                   {% endeditable_short_text %}
-                </ul>
+                </span>
+                <span class="section-description">
+                  {% editable_short_text "technologies_bloc_1_description", hint: "Technologies Bloc 1 Description", priority: 86 %}
+                    <ul>
+                      <li>Ruby on Rails</li>
+                      <li>HTML5</li>
+                      <li>iOS</li>
+                      <li>Android</li>
+                    </ul>
+                  {% endeditable_short_text %}
+                </span>
               </div>
             </div>
             <div class="span4">
               <div class="padding20">
-                <span class="list-title">We are Applidget</span>
-                <span class="list-description">
-                  {% editable_short_text "we_are_applidget_description", hint: "We Are Applidget Description", priority: 84 %}
+                <span class="section-title">
+                  {% editable_short_text "technologies_bloc_2_title", hint: "Technologies Bloc 2 Title", priority: 85 %}
+                    We are Applidget
+                  {% endeditable_short_text %}
+                </span>
+                <span class="section-description">
+                  {% editable_short_text "technologies_bloc_2_description", hint: "Technologies Bloc 2 Description", priority: 84 %}
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   {% endeditable_short_text %}
                 </span>
@@ -171,9 +182,13 @@
             </div>
             <div class="span4">
               <div class="padding20">
-                <span class="list-title">What they're saying</span>
-                <span class="list-description">
-                  {% editable_short_text "what_they_say_description", hint: "What they're saying Description", priority: 82 %}
+                <span class="section-title">
+                  {% editable_short_text "technologies_bloc_3_title", hint: "Technologies Bloc 3 Title", priority: 83 %}
+                    What they're saying
+                  {% endeditable_short_text %}
+                </span>
+                <span class="section-description">
+                  {% editable_short_text "technologies_bloc_3_description", hint: "Technologies Bloc 3 Description", priority: 82 %}
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                   {% endeditable_short_text %}
                 </span>
