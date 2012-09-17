@@ -83,7 +83,7 @@
       <div class="jumbotron" id="section-why-choose">
         <div class="container">
           <div class="row">
-            <div class="span4">
+            <div class="span4 center">
               {{ "air-liquide-screenshot.png" | theme_image_tag }}
             </div>
             <div class="span5">
@@ -106,19 +106,29 @@
                   {% editable_short_text "specialties_title", hint: "Our Specialties", priority: 94 %}
                     Our specialties:
                   {% endeditable_short_text %}
-                </span>
+                </span>                
+                {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
                 <ul>
-                  {% editable_long_text "specialties_list", hint: "Specialties List", priority: 93 %}
-                    <li>Ruby on Rails</li>
-                    <li>HTML5</li>
-                    <li>iOS</li>
-                    <li>Android</li>
-                  {% endeditable_long_text %}
+                  <li>Ruby on Rails</li>
+                  <li>HTML5</li>
+                  <li>iOS</li>
+                  <li>Android</li>
+                </ul>
+                {% endeditable_long_text %}
                 </ul>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+
+      <div class="jumbotron" id="section-technologies">
+        {% include 'technologies' %}
+      </div>
+
+      <div class="jumbotron" id="section-technologies-description">
+        {% include 'technologies_description' %}
       </div>
       
     {% endblock %}
