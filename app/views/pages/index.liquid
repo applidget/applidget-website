@@ -120,6 +120,28 @@
           </div>
         </div>
       </div>
+
+
+      <div class="jumbotron" id="section-technologies">
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <h1>
+              {% editable_short_text "our_technologies_title", hint: "Our Technologies", priority: 90 %}
+                Our Technologies
+              {% endeditable_short_text %}
+              </h1>
+            </div>
+          </div>
+
+          <div class="row section-description">
+            <div class="span12">
+              <span class="glow">{{ "white-glow-big.png" || theme_image_tag }}</span>
+              {{ "technologies.png" | theme_image_tag }}
+            </div>
+          </div>
+        </div>
+      </div>
       
     {% endblock %}
 

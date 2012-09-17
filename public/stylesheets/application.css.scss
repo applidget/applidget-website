@@ -83,6 +83,7 @@ body {
 
 #section-stickers {
   background: url('/images/gradient-background-glow.png') repeat-y top center;
+  color: #252525;
   
   p {
     margin-top: 23px;
@@ -146,6 +147,23 @@ body {
   }
 }
 
+#section-technologies {
+  background: #3586eb url('/images/grid-pattern-white.png') repeat top left;
+  color: #fff;
+  padding-bottom: 50px;
+  position: relative;
+
+  .section-description {
+    margin-top: 30px;
+  }
+
+  .glow {
+    position: absolute;
+    right: -60px;
+    top: -20px;
+  }
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     margin-top: 1em;
@@ -167,6 +185,16 @@ body {
   #section-why-choose {
     p {
       font-size: 0.9em;
+    }
+  }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 22px;
+    }
+
+    .glow {
+      right: -110px;
     }
   }
 }
@@ -195,6 +223,16 @@ body {
       padding-top: 30px;
     }
   }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 22px;
+    }
+
+    .glow {
+      right: -140px;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -215,5 +253,11 @@ body {
   #section-stickers h1, #section-why-choose {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 10px;
+    }
   }
 }
