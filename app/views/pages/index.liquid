@@ -130,6 +130,23 @@
       <div class="jumbotron" id="section-technologies-description">
         {% include 'technologies_description' %}
       </div>
+
+      <div class="jumbotron" id="section-event-solutions">
+        <div class="container">
+          <div class="row">
+            <div class="span4 hidden-phone">
+              {{ "calendar-icon.png" || theme_image_tag }}
+            </div>
+            <div class="span8">
+              <h1>
+              {% editable_short_text "conferences_title", hint: "Conferences Title", priority: 80 %}
+                Event Solutions
+              {% endeditable_short_text %}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
       
     {% endblock %}
 

@@ -213,6 +213,29 @@ body {
   }
 }
 
+#section-event-solutions {
+  background: #eae4d6 url('/images/sunrise-effect-light.png') top center;
+  margin-top: 0px;
+
+  h1 {
+    text-align: left;
+    color: #de0605;
+    text-shadow: 1px 1px 3px #FFFFFF;
+    margin-top: 55px;
+  }
+}
+
+#section-event-solutions:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url('/images/dented-events.png') repeat-x top left;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     margin-top: 1em;
@@ -291,7 +314,14 @@ body {
 
       .section-title, .section-description { font-size: 0.9em; }
     }
-  }   
+  }
+
+  #section-event-solutions {
+    h1 {
+      margin-top: 22px;
+      text-align: center;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
