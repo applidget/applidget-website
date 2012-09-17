@@ -10,6 +10,8 @@ body {
 .v-bottom, .v-bottom img { vertical-align: bottom; }
 .light-orange { color: #d64727; }
 .bold-grey { color: #464646; }
+.center { text-align: center; }
+.padding20 { padding: 20px; }
 
 // Top navigation menu
 #main-navbar {
@@ -83,6 +85,7 @@ body {
 
 #section-stickers {
   background: url('/images/gradient-background-glow.png') repeat-y top center;
+  color: #252525;
   
   p {
     margin-top: 23px;
@@ -122,7 +125,7 @@ body {
 
   .white-glow-right {
     background: url('/images/white-glow-right.png') no-repeat top left;
-    margin-top: 30px;
+    margin-top: 12px;
     padding-top: 48px;
     min-height: 240px; // background-image height - padding-top (288px - 40px)
     text-align: left;
@@ -141,6 +144,70 @@ body {
 
       li {
         line-height: 2.5em;
+      }
+    }
+  }
+}
+
+#section-technologies {
+  background: #3586eb url('/images/grid-pattern-white.png') repeat top left;
+  color: #fff;
+  margin-top: 0px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  h1 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .section-description {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .glow {
+    position: absolute;
+    right: 0px;
+    top: -20px;
+    z-index: -2;
+  }
+}
+
+#section-technologies:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url('/images/dented-technologies.png') repeat-x top left;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#section-technologies-description {
+  background: #1053a6 url('/images/grid-pattern-white.png') repeat top left;
+  color: #fff;
+  margin-top: 0px;
+
+  [class*="span"] {
+    background-color: #06336b;
+    line-height: 1.7em;
+    min-height: 210px;
+    @include border-radius(4px);
+    @include box-shadow(inset 0 0 7px #333333);
+
+    .section-title, .section-description { display: block; }
+
+    .section-title { 
+      font-weight: bold;
+      padding-bottom: 7px;
+    }
+
+    .section-description {
+      ul {
+        list-style-image: url('/images/list-white-check.png');
+        padding-left: 20px;
       }
     }
   }
@@ -168,17 +235,32 @@ body {
     p {
       font-size: 0.9em;
     }
+
+    .white-glow-right {
+      margin-top: 52px;
+    }
+  }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 22px;
+    }
+  }
+
+  #section-technologies-description {
+    [class*="span"] {
+      line-height: 1.5em;
+      min-height: 220px;
+      
+      .section-title, .section-description { font-size: 0.9em; }
+    }
   }
 }
 
 @media (max-width: 767px) {
-  #section-stickers {
-    h1 {
-      font-size: 2.8em;
-    }
-  }
-
   #section-why-choose {
+    padding-bottom: 5px;
+
     p {
       font-size: 0.9em;
     }
@@ -195,6 +277,21 @@ body {
       padding-top: 30px;
     }
   }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 22px;
+    }
+  }
+
+  #section-technologies-description {
+    [class*="span"] {
+      min-height: inherit;
+      margin-bottom: 10px;
+
+      .section-title, .section-description { font-size: 0.9em; }
+    }
+  }   
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -212,8 +309,20 @@ body {
     }
   }
 
-  #section-stickers h1, #section-why-choose {
+  #section-stickers h1, #section-why-choose, #section-technologies, #section-technologies-description {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  #section-technologies {
+    .section-description {
+      margin-top: 10px;
+    }
+  }
+
+  #section-technologies-description {
+    .container {
+      padding-top: 10px;
+    }
   }
 }
