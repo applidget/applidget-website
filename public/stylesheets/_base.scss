@@ -2,7 +2,7 @@
 
 /* Common Variables */
 $grey: #3d3d3d;
-$image-list: (contact, blogs, jobs, follow, technologies, spirit);  // TODO(ssaunier): is there a way to retrieve this list programatically?
+$image-list: (applidget, blogs, contact, events, team, technologies);  // TODO(ssaunier): is there a way to retrieve this list programatically?
 
 /* Compass Modules Import */
 @import "compass/reset";
@@ -26,9 +26,9 @@ $image-list: (contact, blogs, jobs, follow, technologies, spirit);  // TODO(ssau
   $width: image-width(sprite-file($sprites, $name));
   $height: image-height(sprite-file($sprites, $name));
 
-  @include background-size(ceil($spriteWidth * $percent) ceil($spriteHeight * $percent));
-  width: ceil($width * $percent);
-  height: ceil($height * $percent);
+  @include background-size(floor($spriteWidth * $percent) floor($spriteHeight * $percent));
+  width: floor($width * $percent);
+  height: floor($height * $percent) - 1; // -1 to make sure the background fits in the block because of its rounded position
   background-position: 0 floor(nth(sprite-position($sprites, $name), 2) * $percent);
 
   // Retina
@@ -38,8 +38,8 @@ $image-list: (contact, blogs, jobs, follow, technologies, spirit);  // TODO(ssau
       $position2x: sprite-position($sprites2x, $name);
 
       @if ($position != $position2x / 2) {
-        $xpos: nth(sprite-position($sprites2x, $name), 1) * $percent / 2;
-        $ypos: nth(sprite-position($sprites2x, $name), 2) * $percent / 2;
+        $xpos: floor(nth(sprite-position($sprites2x, $name), 1) * $percent / 2);
+        $ypos: floor(nth(sprite-position($sprites2x, $name), 2) * $percent / 2);
         background-position: $xpos $ypos;
       }
 

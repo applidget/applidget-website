@@ -17,13 +17,6 @@
     margin-bottom: 42px;
   }
   
-  p {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 30px;
-  }
-  
   a:hover {
     color: #fff;
   }
@@ -58,9 +51,7 @@
 @media (max-width: 767px) {
   .jumbotron {
     padding: 20px;
-    margin-top:   -20px; /* Offset bottom margin on .navbar */
-    margin-right: -20px;
-    margin-left:  -20px;
+    margin-top: -20px; /* Offset bottom margin on .navbar */
     
     h1 {
       font-size: 2.8em;
@@ -70,6 +61,8 @@
 
 @media (max-width: 480px) {
   .jumbotron {
+    padding: 0;
+    
     h1 {
       font-size: 2.3em;
     }
