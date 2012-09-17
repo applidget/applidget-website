@@ -153,25 +153,32 @@ body {
 #section-technologies {
   background: #3586eb url('/images/grid-pattern-white.png') repeat top left;
   color: #fff;
-  padding-bottom: 40px;
+  margin-top: 0px;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
+  h1 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  
   .section-description {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
   }
 
   .glow {
     position: absolute;
-    right: -60px;
+    right: 0px;
     top: -20px;
+    z-index: -2;
   }
 }
 
 #section-technologies-description {
   background: #1053a6 url('/images/grid-pattern-white.png') repeat top left;
   color: #fff;
+  margin-top: 0px;
 
   [class*="span"] {
     background-color: #06336b;
@@ -222,14 +229,11 @@ body {
     .section-description {
       margin-top: 22px;
     }
-
-    .glow {
-      right: -110px;
-    }
   }
 
   #section-technologies-description {
     [class*="span"] {
+      line-height: 1.5em;
       min-height: 220px;
       
       .list-title, .list-description { font-size: 0.9em; }
@@ -245,6 +249,8 @@ body {
   }
 
   #section-why-choose {
+    padding-bottom: 5px;
+
     p {
       font-size: 0.9em;
     }
@@ -265,10 +271,6 @@ body {
   #section-technologies {
     .section-description {
       margin-top: 22px;
-    }
-
-    .glow {
-      right: -140px;
     }
   }
 
@@ -297,7 +299,7 @@ body {
     }
   }
 
-  #section-stickers h1, #section-why-choose {
+  #section-stickers h1, #section-why-choose, #section-technologies, #section-technologies-description {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -305,6 +307,12 @@ body {
   #section-technologies {
     .section-description {
       margin-top: 10px;
+    }
+  }
+
+  #section-technologies-description {
+    .container {
+      padding-top: 10px;
     }
   }
 }
