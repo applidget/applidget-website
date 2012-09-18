@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="span4 hidden-phone headshots">
+      {{ "people-headshots.png" || theme_image_tag }}
+    </div>
+    <div class="span4">
+      <h1>
+      {% editable_short_text "people_title", hint: "People Title", priority: 70 %}
+        People
+      {% endeditable_short_text %}
+      </h1>
+    </div>
+    <div class="span4 hidden-phone white-screen">
+      {{ "people-white-screen.png" || theme_image_tag }}
+    </div>    
+  </div>
+
+  <div class="row">
+    <div class="span4 team-bloc">
+      <div class="padding20">
+        Our Team
+      </div>
+    </div>
+
+    <div class="span4 team-bloc">
+      <div class="padding20">
+        Join Us
+      </div>
+    </div>
+
+    <div class="span4 team-bloc">
+      <div class="padding20">
+        Last Open Positions
+      </div>
+    </div>
+  </div>
+</div>
