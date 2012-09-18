@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="span4 hidden-phone calendar">
+      {{ "calendar-icon.png" || theme_image_tag }}
+    </div>
+    <div class="span8">
+      <h1>
+      {% editable_short_text "conferences_title", hint: "Conferences Title", priority: 80 %}
+        Event Solutions
+      {% endeditable_short_text %}
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span8">
+      <div class="business-card">
+        <h3>
+          {% editable_short_text "business_card_name", hint: "Business Card Name", priority: 78 %}
+            Tristan Verdier
+          {% endeditable_short_text %}
+          <span class="icon-write"></span>
+        </h3>
+        {% editable_long_text "business_card_info", hint: "Business Card Info", priority: 76 %}
+          <span class="card-info email">Email: tristan.verdier@gmail.com</span><br />
+          <span class="card-info phone">Phone: 123 456 789</span><br />
+          <span class="card-info company">Society: Applidget</span><br />
+          <span class="card-info position">Position: Some</span>
+        {% endeditable_long_text %}
+      </div>
+    </div>
+    <div class="span4">
+      <span class="info success">
+        {% editable_short_text "you_will_attend", hint: "You will attend", priority: 75 %}
+          You will attend
+        {% endeditable_short_text %}
+      </span>
+      <span class="info yes">
+        {% editable_short_text "attend_yes", hint: "Yes", priority: 74 %}
+          Yes
+        {% endeditable_short_text %}
+      </span>
+      <span class="info maybe">
+        {% editable_short_text "attend_maybe", hint: "Maybe", priority: 73 %}
+          Maybe
+        {% endeditable_short_text %}
+      </span>
+      <span class="info credits">
+        {% editable_short_text "powered_text", hint: "Powered by Applidget", priority: 72 %}
+          Organized by Someone<br />
+          Powered by Applidget
+        {% endeditable_short_text %}
+      </span>
+    </div>
+  </div>
+</div>
