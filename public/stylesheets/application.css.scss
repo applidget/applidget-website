@@ -228,24 +228,6 @@ body {
     margin-bottom: 20px;
   }
 
-  .info {
-    display: inline-block;
-    margin-bottom: 6px;
-    width: 100%;
-    text-align: center;
-    height: 65px;
-    line-height: 65px;
-    font-size: 1.4em;
-  }
-
-  .success {
-    background-color: #f3ffe0;
-    border: 1px solid #acd866;
-    @include border-radius(4px);
-    color: #579839;
-    
-  }
-
   .business-card {
     background: url('/images/business-card.png') no-repeat top center;
     background-size: contain;
@@ -290,6 +272,30 @@ body {
     .position {
       background: url('/images/list-icon-position.png') no-repeat top left;
     }
+  }
+
+  .info {
+    display: inline-block;
+    margin-bottom: 6px;
+    width: 100%;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    font-size: 1.4em;
+  }
+
+  .credits {
+    line-height: 27px;
+    font-size: 0.9em;
+    color: #707070;
+  }
+
+  .success {
+    background-color: #f3ffe0;
+    border: 1px solid #acd866;
+    @include border-radius(4px);
+    color: #579839;
+    
   }
 
   .yes, .maybe {
@@ -407,6 +413,12 @@ body {
       margin-bottom: 4px;
     }
 
+    .credits {
+      font-size: 0.8em;
+      line-height: 19px;
+      margin-top: 5px;
+    }
+
     .yes {
       margin-bottom: -1px;
     }
@@ -512,6 +524,12 @@ body {
       margin-bottom: 4px;
     }
 
+    .credits {
+      font-size: 0.8em;
+      line-height: 19px;
+      margin-top: 5px;
+    }
+
     .yes {
       margin-bottom: -1px;
     }
@@ -555,6 +573,10 @@ body {
   }
 
   #section-event-solutions {
+    h1 {
+      margin-bottom: 30px;
+    }
+    
     .business-card {
       padding: 20px;
     }
