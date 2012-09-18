@@ -224,6 +224,10 @@ body {
     margin-top: 55px;
   }
 
+  .calendar {
+    margin-bottom: 20px;
+  }
+
   .info {
     display: inline-block;
     margin-bottom: 6px;
@@ -240,6 +244,52 @@ body {
     @include border-radius(4px);
     color: #579839;
     
+  }
+
+  .business-card {
+    background: url('/images/business-card.png') no-repeat top center;
+    background-size: contain;
+    height: 260px;
+    color: #707070;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+
+    h3 {
+      color: #d64727;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .icon-write {
+      background: url('/images/icon-write.png') no-repeat top left;
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+    }
+
+    .card-info {
+      line-height: 21px;
+      display: inline-block;
+      height: 21px;
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    .email {
+      background: url('/images/list-icon-mail.png') no-repeat top left;
+    }
+
+    .phone {
+      background: url('/images/list-icon-phone.png') no-repeat top left;
+    }
+
+    .company {
+      background: url('/images/list-icon-company.png') no-repeat top left;
+    }
+
+    .position {
+      background: url('/images/list-icon-position.png') no-repeat top left;
+    }
   }
 
   .yes, .maybe {
@@ -322,6 +372,45 @@ body {
       .section-title, .section-description { font-size: 0.9em; }
     }
   }
+
+  #section-event-solutions {
+    .business-card {
+      height: 200px;
+      margin-bottom: 15px;
+      padding: 24px 30px;
+
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 18px;
+      }
+
+      .icon-write {
+        background-size: 21px 21px;
+        height: 21px;
+        margin-left: 10px;
+        width: 21px;
+      }
+
+      .card-info {
+        font-size: 0.9em;
+        height: auto;
+        line-height: 18px;
+        margin-bottom: 10px;
+        background-size: 17px 17px;
+      }
+    }
+
+    .info {
+      font-size: 1.2em;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 4px;
+    }
+
+    .yes {
+      margin-bottom: -1px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -352,6 +441,8 @@ body {
   }
 
   #section-technologies-description {
+    padding-bottom: 10px;
+
     [class*="span"] {
       min-height: inherit;
       margin-bottom: 10px;
@@ -363,7 +454,66 @@ body {
   #section-event-solutions {
     h1 {
       margin-top: 22px;
+      margin-bottom: 45px;
       text-align: center;
+    }
+
+    .business-card {
+      position: relative;
+      height: 180px;
+      margin-bottom: 10px;
+      padding: 25px 35px;
+      background-image: none;
+      border: 1px solid #909090;
+      @include border-radius(4px 4px 4px 4px);
+      background-color:#ffffff;
+      *background-color:#ffffff;
+      @include background-image(linear-gradient(color-stops(#ffffff, #e9e9e9)));
+      filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe9e9e9',GradientType=0);
+      filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+      background-repeat:repeat-x;
+
+      h3 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-right: 22px;
+      }
+
+      .icon-write {
+        background-size: 19px 19px;
+        height: 19px;
+        margin-left: 10px;
+        width: 19px;
+      }
+
+      .card-info {
+        font-size: 0.8em;
+        height: auto;
+        line-height: 21px;
+        margin-bottom: 0.8em;
+      }
+    }
+
+    .business-card:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url('/images/invited-flag.png') no-repeat top right;
+      right: -3px;
+      top: -3px;
+      bottom: 0;
+      left: 0;
+    }
+
+    .info {
+      font-size: 1.2em;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 4px;
+    }
+
+    .yes {
+      margin-bottom: -1px;
     }
   }
 }
@@ -383,7 +533,11 @@ body {
     }
   }
 
-  #section-stickers h1, #section-why-choose, #section-technologies, #section-technologies-description {
+  #section-stickers h1, 
+  #section-why-choose, 
+  #section-technologies, 
+  #section-technologies-description,
+  #section-event-solutions {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -397,6 +551,12 @@ body {
   #section-technologies-description {
     .container {
       padding-top: 10px;
+    }
+  }
+
+  #section-event-solutions {
+    .business-card {
+      padding: 20px;
     }
   }
 }
