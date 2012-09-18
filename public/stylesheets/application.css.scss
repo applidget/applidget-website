@@ -354,12 +354,32 @@ body {
   }
 
   .team-bloc {
-    min-height: 350px;
+    min-height: 300px;
     color: #8d8d8d;
     text-shadow: none;
+    line-height: 1.8em;
     background-color: #FFFFFF;
     @include border-radius(4px);
     @include box-shadow(inset 0 0 6px #8D8D8D);
+
+    .bloc-title {
+      display: block;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .bloc-section-title {
+      display: block;
+      background: url('/images/list-icon-people.png') no-repeat top left;
+      padding-left: 25px;
+      text-decoration: underline;
+    }
+
+    .bloc-section-description {
+      display: block;
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -459,6 +479,14 @@ body {
 
     .yes {
       margin-bottom: -1px;
+    }
+  }
+
+  #section-team {
+    .team-bloc {
+      font-size: 0.9em;
+
+      .bloc-section-description { line-height: 1.5em; }
     }
   }
 }
@@ -580,7 +608,9 @@ body {
     }
 
     .team-bloc {
+      font-size: 0.9em;
       margin-bottom: 10px;
+      min-height: inherit;
     }
   }
 }
@@ -629,6 +659,12 @@ body {
 
     .business-card {
       padding: 20px;
+    }
+  }
+
+  #section-team {
+    h1 {
+      margin-bottom: 30px;
     }
   }
 }
