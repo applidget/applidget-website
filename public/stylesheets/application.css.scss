@@ -385,6 +385,20 @@ body {
   @include after-before-content('', block, absolute, url('/images/dented-blogs.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
+#section-footer {
+  background: #cccccc;
+  text-shadow: 1px 0px 1px #FFFFFF;
+  margin-top: 40px;
+
+  h1 {
+    color: #252525;
+  }
+}
+
+#section-footer:before {
+  @include after-before-content('', block, absolute, url('/images/footer-effect.png') repeat-x top left, -29px, 0, 0, 0);
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     margin-top: 1em;
