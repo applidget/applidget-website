@@ -13,16 +13,16 @@ body {
 .center { text-align: center; }
 .padding20 { padding: 20px; }
 
-.email { @include list-icon(mail); }
-.phone { @include list-icon(phone); }
-.company { @include list-icon(company); }
-.position { @include list-icon(position); }
-.team { @include list-icon(people, center); }
-.suitcase { @include list-icon(suitcase, center); }
-.tv { @include list-icon(tv, center); }
-.twitter { @include list-icon(twitter); }
-.facebook { @include list-icon(facebook); }
-.linkedin { @include list-icon(linkedin); }
+$icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
+$icon-center-classes-list: (team, suitcase, tv);
+
+@each $selector in $icon-classes-list {
+  .#{$selector} { @include list-icon($selector); }
+}
+
+@each $selector in $icon-center-classes-list {
+  .#{$selector} { @include list-icon($selector, center); }
+}
 
 .read-more {
   display: block;
