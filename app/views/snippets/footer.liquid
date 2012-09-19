@@ -11,11 +11,26 @@
 
   <div class="row">
     <div class="span6">
-      <span class="list-info-medium email-medium">E-mail us: info@applidget.com</span><br />
-      <span class="list-info-medium phone-medium">Call us: 555 456</span><br />
-      <span class="list-info-medium location-medium">Fake Street 654, ST, Country</span><br />
+      <span class="list-info-medium email-medium">
+        {% editable_short_text "email_us_title", hint: "Email Us", priority: 49 %}
+          E-mail us: info@applidget.com
+        {% endeditable_short_text %}
+      </span><br />
+      <span class="list-info-medium phone-medium">
+        {% editable_short_text "call_us_title", hint: "Call Us", priority: 48 %}
+          Call us: 555 456
+        {% endeditable_short_text %}
+      </span><br />
+      <span class="list-info-medium location-medium">
+        {% editable_short_text "location_title", hint: "Location", priority: 47 %}
+          Fake Street 654, ST, Country
+        {% endeditable_short_text %}
+      </span><br />
       <br />
-      <span class="list-info-medium heart-medium">Go Social:
+      <span class="list-info-medium heart-medium">
+        {% editable_short_text "go_social_title", hint: "Go Social", priority: 46 %}
+          Go Social:
+        {% endeditable_short_text %}
         <span class="inline-to-block">
           {{ "icon-facebook-big-colored.png" | theme_image_tag }}
           {{ "icon-twitter-big-colored.png" | theme_image_tag }}
@@ -30,7 +45,11 @@
   </div>
 
   <div class="row">
-    <div class="span4 copyrights">Applidget 2012 (c) All Rights Reserved</div>
+    <div class="span4 copyrights">
+      {% editable_short_text "copyrights_title", hint: "Copyrights", priority: 45 %}
+          Applidget 2012 (c) All Rights Reserved
+      {% endeditable_short_text %}
+    </div>
     <div class="span8 menu">
       {% nav site, class: 'nav', active_class: 'active', bootstrap: true %}
     </div>
