@@ -24,6 +24,11 @@ body {
 .facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
 .linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
 
+.email-medium { background: url('/images/list-icon-mail-medium.png') no-repeat center left; }
+.phone-medium { background: url('/images/list-icon-phone-medium.png') no-repeat center left; }
+.location-medium { background: url('/images/list-icon-location-medium.png') no-repeat center left; }
+.heart-medium { background: url('/images/list-icon-heart-medium.png') no-repeat center left; }
+
 .read-more {
   display: block;
   margin-top: 20px;
@@ -387,11 +392,14 @@ body {
 
 #section-footer {
   background: #cccccc;
+  color: #3d3d3d;
   text-shadow: 1px 0px 1px #FFFFFF;
   margin-top: 40px;
+  padding-bottom: 50px;
 
   h1 {
     color: #252525;
+    margin-bottom: 45px;
   }
 }
 
@@ -618,7 +626,8 @@ body {
   #section-technologies-description,
   #section-event-solutions,
   #section-team,
-  #section-blogs {
+  #section-blogs,
+  #section-footer {
     padding-left: 20px;
     padding-right: 20px;
   }

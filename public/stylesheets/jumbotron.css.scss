@@ -58,6 +58,20 @@
       padding-left: 2em;
       margin-bottom: 1em;
     }
+
+    .list-info-medium {
+      font-size: 1.1em;
+      line-height: 32px;
+      display: inline-block;
+      height: auto;
+      padding-left: 2.8em;
+      margin-bottom: 10px;
+
+      img {
+        vertical-align: -55%;
+        margin-left: 5px;
+      }
+    }
   }
 }
 
@@ -97,6 +111,17 @@
         margin-bottom: 10px;
         background-size: 17px 17px;
       }
+
+      .list-info-medium {
+        font-size: 1em;
+        line-height: 28px;
+        background-size: 25px;
+
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
     }
   }
 }
@@ -117,6 +142,17 @@
         font-size: 0.9em;
         margin-bottom: 10px;
         min-height: inherit;
+      }
+
+      .list-info-medium {
+        font-size: 1em;
+        line-height: 28px;
+        background-size: 25px;
+
+        img {
+          width: 45px;
+          height: 45px;
+        }
       }
     }
   }
