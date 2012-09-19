@@ -16,19 +16,23 @@
       <span class="list-info-medium location-medium">Fake Street 654, ST, Country</span><br />
       <br />
       <span class="list-info-medium heart-medium">Go Social:
-
-        {{ "icon-facebook-big-colored.png" | theme_image_tag }}
-        {{ "icon-twitter-big-colored.png" | theme_image_tag }}
-        {{ "icon-linkedin-big-colored.png" | theme_image_tag }}
+        <span class="inline-to-block">
+          {{ "icon-facebook-big-colored.png" | theme_image_tag }}
+          {{ "icon-twitter-big-colored.png" | theme_image_tag }}
+          {{ "icon-linkedin-big-colored.png" | theme_image_tag }}
+        </span>
       </span>
     </div>
 
-    <div class="span6">
-
+    <div class="span6 contact-form">
+      <iframe height="499" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://applidget.wufoo.com/embed/q7w9k9/"><a href="https://applidget.wufoo.com/forms/q7w9k9/">Fill out our contact form!</a></iframe>
     </div>
   </div>
 
   <div class="row">
-
+    <div class="span4 copyrights">Applidget 2012 (c) All Rights Reserved</div>
+    <div class="span8 menu">
+      {% nav site, class: 'nav', active_class: 'active', bootstrap: true %}
+    </div>
   </div>
 </div>

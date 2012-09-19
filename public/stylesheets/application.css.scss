@@ -12,6 +12,7 @@ body {
 .bold-grey { color: #464646; }
 .center { text-align: center; }
 .padding20 { padding: 20px; }
+.inline-to-block { display: inline; }
 
 .email { background: url('/images/list-icon-mail.png') no-repeat top left; }
 .phone { background: url('/images/list-icon-phone.png') no-repeat top left; }
@@ -401,6 +402,28 @@ body {
     color: #252525;
     margin-bottom: 45px;
   }
+
+  .copyrights {
+    font-size: 0.8em;
+    color: #939393;
+    text-shadow: none;
+    line-height: 1.4em;
+  }
+
+  .nav {
+    margin-bottom: 0;
+    
+    li {
+      display: inline;
+
+      a {
+        display: inline;
+        color: #3d3d3d;
+        font-size: 0.9em;
+        margin-right: 20px;
+      }
+    }
+  }
 }
 
 #section-footer:before {
@@ -603,6 +626,18 @@ body {
     margin-top: 22px;
     margin-bottom: 45px;
   }
+
+  #section-footer {
+    .contact-form {
+      margin-top: 30px;
+    }
+  }
+
+  #section-footer {
+    .menu {
+      margin-top: 20px;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -613,7 +648,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {  
+@media (max-width: 480px) { 
   #section-stickers {
     .shadow-down {
       bottom: -32px;
@@ -655,4 +690,8 @@ body {
   #section-blogs h1 {
     margin-bottom: 30px;
   }
+}
+
+@media (max-width: 320px) {
+  .inline-to-block { display: block; }
 }
