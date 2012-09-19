@@ -13,6 +13,65 @@ body {
 .center { text-align: center; }
 .padding20 { padding: 20px; }
 
+.email { background: url('/images/list-icon-mail.png') no-repeat top left; }
+.phone { background: url('/images/list-icon-phone.png') no-repeat top left; }
+.company { background: url('/images/list-icon-company.png') no-repeat top left; }
+.position { background: url('/images/list-icon-position.png') no-repeat top left; }
+.team { background: url('/images/list-icon-people.png') no-repeat center left; }
+.suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
+.tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
+.twitter { background: url('/images/list-icon-twitter.png') no-repeat top left; }
+.facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
+.linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
+
+.read-more {
+  display: block;
+  margin-top: 20px;
+  padding-right: 30%;
+  font-size: inherit;
+  line-height: 1.3em;
+}
+
+.read-more:after {
+  content: url('/images/icon-readmore.png');
+  position: relative;
+  left: 5px;
+  top: 1px;
+}
+
+.btn-huge {
+  padding: 22px 54px;
+  font-size: 21px;
+  font-weight: normal;
+  color: #fff; /* redeclare to override the `.jumbotron a` */
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  @include border-radius(6px);
+}
+
+.btn-huge:hover, .btn-huge:active,.btn-huge.active {
+  background-position: 0 -64px;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+  
+.btn-red {
+  color:#fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background-color:#d64727;
+  *background-color:#d64727;
+  @include background-image(linear-gradient(color-stops(#de552f, #d64727)));
+  filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffde552f',endColorstr='#ffd64727',GradientType=0);
+  filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+  background-repeat:repeat-x;
+  border-color:#d64727 #d64727 #000;
+  border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.2) rgba(0,0,0,0.2) rgba(0,0,0,0.1);
+}
+
+.btn-red:hover,.btn-red:active,.btn-red.active,.btn-red.disabled,.btn-red[disabled] {
+  background-color:#d54124;
+  *background-color:#d54124;
+}
+
 // Top navigation menu
 #main-navbar {
   font-family: 'museo500';
@@ -48,39 +107,6 @@ body {
   .link.last a {
     padding-right: 0;
   }
-}
-
-.btn-huge {
-  padding: 22px 54px;
-  font-size: 21px;
-  font-weight: normal;
-  color: #fff; /* redeclare to override the `.jumbotron a` */
-  border-width: 0px 1px 1px 0px;
-  border-style: solid;
-  @include border-radius(6px);
-}
-
-.btn-huge:hover, .btn-huge:active,.btn-huge.active {
-  background-position: 0 -64px;
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
-}
-  
-.btn-red {
-  color:#fff;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  background-color:#d64727;
-  *background-color:#d64727;
-  @include background-image(linear-gradient(color-stops(#de552f, #d64727)));
-  filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffde552f',endColorstr='#ffd64727',GradientType=0);
-  filter:progid:dximagetransform.microsoft.gradient(enabled=false);
-  background-repeat:repeat-x;
-  border-color:#d64727 #d64727 #000;
-  border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.2) rgba(0,0,0,0.2) rgba(0,0,0,0.1);
-}
-
-.btn-red:hover,.btn-red:active,.btn-red.active,.btn-red.disabled,.btn-red[disabled] {
-  background-color:#d54124;
-  *background-color:#d54124;
 }
 
 #section-stickers {
@@ -175,14 +201,7 @@ body {
 }
 
 #section-technologies:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url('/images/dented-technologies.png') repeat-x top left;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include after-before-content('', block, absolute, url('/images/dented-technologies.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
 #section-technologies-description {
@@ -248,30 +267,6 @@ body {
       width: 30px;
       margin-left: 15px;
     }
-
-    .card-info {
-      line-height: 21px;
-      display: inline-block;
-      height: 21px;
-      padding-left: 2em;
-      margin-bottom: 1em;
-    }
-
-    .email {
-      background: url('/images/list-icon-mail.png') no-repeat top left;
-    }
-
-    .phone {
-      background: url('/images/list-icon-phone.png') no-repeat top left;
-    }
-
-    .company {
-      background: url('/images/list-icon-company.png') no-repeat top left;
-    }
-
-    .position {
-      background: url('/images/list-icon-position.png') no-repeat top left;
-    }
   }
 
   .info {
@@ -326,14 +321,7 @@ body {
 }
 
 #section-event-solutions:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url('/images/dented-events.png') repeat-x top left;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include after-before-content('', block, absolute, url('/images/dented-events.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
 #section-team {
@@ -353,46 +341,10 @@ body {
   .white-screen {
     padding-top: 20px;
   }
-
-  .team-bloc {
-    min-height: 300px;
-    color: #8d8d8d;
-    text-shadow: none;
-    line-height: 1.8em;
-    background-color: #FFFFFF;
-    @include border-radius(4px);
-    @include box-shadow(inset 0 0 6px #8D8D8D);
-
-    .bloc-title {
-      display: block;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .bloc-section-title {
-      display: block;
-      background: url('/images/list-icon-people.png') no-repeat center left;
-      padding-left: 25px;
-      text-decoration: underline;
-    }
-
-    .bloc-section-description {
-      display: block;
-      margin-bottom: 8px;
-    }
-  }
 }
 
 #section-team:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url('/images/dented-team.png') repeat-x top left;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include after-before-content('', block, absolute, url('/images/dented-team.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
 #section-blogs {
@@ -414,90 +366,23 @@ body {
     padding-top: 50px;
   }
 
-  .blogs-bloc {
-    min-height: 310px;
-    color: #8d8d8d;
-    text-shadow: none;
-    line-height: 1.8em;
-    background-color: #FFFFFF;
-    @include border-radius(4px);
-    @include box-shadow(inset 0 0 6px #8D8D8D);
-
-    .card-info {
-      line-height: 21px;
-      display: inline-block;
-      height: 21px;
-      padding-left: 1.8em;
-    }
-
-    .bloc-title {
-      display: block;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .bloc-section-title {
-      display: block;
-      padding-left: 25px;
-      text-decoration: underline;
-    }
-
-    .bloc-section-description {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .list-suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
-    .list-tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
-    .twitter { background: url('/images/list-icon-twitter.png') no-repeat top left; }
-    .facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
-    .linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
+  .list-info {
+    padding-left: 1.8em;
+    margin-bottom: 0;
   }
 
-  .social-networks-bloc {
-    background-image: url("/images/social-networks-falling.png");
+  .social-networks-bloc, .suitcase-bloc, .tv-bloc {
     background-repeat: no-repeat;
     background-position: 90% 102%;
   }
 
-  .suitcase-bloc {
-    background-image: url("/images/icon-suitcase-medium.png");
-    background-repeat: no-repeat;
-    background-position: 90% 102%;
-  }
-
-  .tv-bloc {
-    background-image: url("/images/icon-tv-medium.png");
-    background-repeat: no-repeat;
-    background-position: 90% 102%;
-  }
+  .social-networks-bloc { background-image: url("/images/social-networks-falling.png"); }
+  .suitcase-bloc { background-image: url("/images/icon-suitcase-medium.png"); }
+  .tv-bloc { background-image: url("/images/icon-tv-medium.png"); }
 }
 
 #section-blogs:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url('/images/dented-blogs.png') repeat-x top left;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.read-more {
-  display: block;
-  margin-top: 20px;
-  padding-right: 30%;
-  font-size: inherit;
-  line-height: 1.3em;
-}
-
-.read-more:after {
-  content: url('/images/icon-readmore.png');
-  position: relative;
-  left: 5px;
-  top: 1px;
+  @include after-before-content('', block, absolute, url('/images/dented-blogs.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
 @media(min-width: 980px) {
@@ -560,14 +445,6 @@ body {
         margin-left: 10px;
         width: 21px;
       }
-
-      .card-info {
-        font-size: 0.9em;
-        height: auto;
-        line-height: 18px;
-        margin-bottom: 10px;
-        background-size: 17px 17px;
-      }
     }
 
     .info {
@@ -585,24 +462,6 @@ body {
 
     .yes {
       margin-bottom: -1px;
-    }
-  }
-
-  #section-team {
-    .team-bloc {
-      font-size: 0.9em;
-
-      .bloc-section-title { background-size: 16px 15px; }
-      .bloc-section-description { line-height: 1.5em; }
-    }
-  }
-
-  #section-blogs {
-    .blogs-bloc {
-      font-size: 0.9em;
-
-      .bloc-section-description { line-height: 1.5em; }
-      .twitter, .facebook, .linkedin { background-size: 17px 17px; }
     }
   }
 }
@@ -717,30 +576,10 @@ body {
     }
   }
 
-  #section-team {
-    h1 {
-      margin-top: 22px;
-      margin-bottom: 45px;
-    }
-
-    .team-bloc {
-      font-size: 0.9em;
-      margin-bottom: 10px;
-      min-height: inherit;
-    }
-  }
-
-  #section-blogs {
-    h1 {
-      margin-top: 22px;
-      margin-bottom: 45px;
-    }
-
-    .blogs-bloc {
-      font-size: 0.9em;
-      margin-bottom: 10px;
-      min-height: inherit;
-    }
+  #section-team h1, 
+  #section-blogs h1 {
+    margin-top: 22px;
+    margin-bottom: 45px;
   }
 }
 
@@ -783,24 +622,14 @@ body {
   }
 
   #section-event-solutions {
-    h1 {
-      margin-bottom: 30px;
-    }
-
     .business-card {
       padding: 20px;
     }
   }
 
-  #section-team {
-    h1 {
-      margin-bottom: 30px;
-    }
-  }
-
-  #section-blogs {
-    h1 {
-      margin-bottom: 30px;
-    }
+  #section-event-solutions h1,
+  #section-team h1,
+  #section-blogs h1 {
+    margin-bottom: 30px;
   }
 }
