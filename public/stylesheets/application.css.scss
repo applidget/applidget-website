@@ -13,16 +13,16 @@ body {
 .center { text-align: center; }
 .padding20 { padding: 20px; }
 
-.email { background: url('/images/list-icon-mail.png') no-repeat top left; }
-.phone { background: url('/images/list-icon-phone.png') no-repeat top left; }
-.company { background: url('/images/list-icon-company.png') no-repeat top left; }
-.position { background: url('/images/list-icon-position.png') no-repeat top left; }
-.team { background: url('/images/list-icon-people.png') no-repeat center left; }
-.suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
-.tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
-.twitter { background: url('/images/list-icon-twitter.png') no-repeat top left; }
-.facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
-.linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
+.email { @include list-icon(mail); }
+.phone { @include list-icon(phone); }
+.company { @include list-icon(company); }
+.position { @include list-icon(position); }
+.team { @include list-icon(people, center); }
+.suitcase { @include list-icon(suitcase, center); }
+.tv { @include list-icon(tv, center); }
+.twitter { @include list-icon(twitter); }
+.facebook { @include list-icon(facebook); }
+.linkedin { @include list-icon(linkedin); }
 
 .read-more {
   display: block;
