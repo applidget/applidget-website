@@ -372,7 +372,7 @@ body {
 
     .bloc-section-title {
       display: block;
-      background: url('/images/list-icon-people.png') no-repeat top left;
+      background: url('/images/list-icon-people.png') no-repeat center left;
       padding-left: 25px;
       text-decoration: underline;
     }
@@ -398,6 +398,7 @@ body {
 #section-blogs {
   background: #e5e5e5 url('/images/sunrise-effect-orange.png') repeat-x top center;
   margin-top: 0px;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 3px #707070;
 
   h1 {
@@ -414,13 +415,20 @@ body {
   }
 
   .blogs-bloc {
-    min-height: 300px;
+    min-height: 310px;
     color: #8d8d8d;
     text-shadow: none;
     line-height: 1.8em;
     background-color: #FFFFFF;
     @include border-radius(4px);
     @include box-shadow(inset 0 0 6px #8D8D8D);
+
+    .card-info {
+      line-height: 21px;
+      display: inline-block;
+      height: 21px;
+      padding-left: 1.8em;
+    }
 
     .bloc-title {
       display: block;
@@ -442,6 +450,27 @@ body {
 
     .list-suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
     .list-tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
+    .twitter { background: url('/images/list-icon-twitter.png') no-repeat top left; }
+    .facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
+    .linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
+  }
+
+  .social-networks-bloc {
+    background-image: url("/images/social-networks-falling.png");
+    background-repeat: no-repeat;
+    background-position: 90% 102%;
+  }
+
+  .suitcase-bloc {
+    background-image: url("/images/icon-suitcase-medium.png");
+    background-repeat: no-repeat;
+    background-position: 90% 102%;
+  }
+
+  .tv-bloc {
+    background-image: url("/images/icon-tv-medium.png");
+    background-repeat: no-repeat;
+    background-position: 90% 102%;
   }
 }
 
@@ -454,6 +483,21 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.read-more {
+  display: block;
+  margin-top: 20px;
+  padding-right: 30%;
+  font-size: inherit;
+  line-height: 1.3em;
+}
+
+.read-more:after {
+  content: url('/images/icon-readmore.png');
+  position: relative;
+  left: 5px;
+  top: 1px;
 }
 
 @media(min-width: 980px) {
@@ -548,6 +592,7 @@ body {
     .team-bloc {
       font-size: 0.9em;
 
+      .bloc-section-title { background-size: 16px 15px; }
       .bloc-section-description { line-height: 1.5em; }
     }
   }
@@ -557,6 +602,7 @@ body {
       font-size: 0.9em;
 
       .bloc-section-description { line-height: 1.5em; }
+      .twitter, .facebook, .linkedin { background-size: 17px 17px; }
     }
   }
 }

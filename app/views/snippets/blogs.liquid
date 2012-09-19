@@ -16,10 +16,10 @@
   </div>
 
   <div class="row">
-    <div class="span4 blogs-bloc">
+    <div class="span4 blogs-bloc suitcase-bloc">
       <div class="padding20">
         <span class="bloc-title">
-          {% editable_short_text "biz_blog_title", hint: "Biz Blog Title", priority: 58 %}
+          {% editable_short_text "biz_blog_title", hint: "Biz Blog Title", priority: 59 %}
             Biz Blog
           {% endeditable_short_text %}
         </span>
@@ -30,11 +30,17 @@
 
         <span class="bloc-section-title list-suitcase">Title of the post</span>
         <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+
+        <span class="read-more">
+          {% editable_short_text "read_more_biz_blog", hint: "Read More Biz Blog", priority: 57 %}
+            Read More
+          {% endeditable_short_text %}
+        </span>
         <!-- End content -->
       </div>
     </div>
 
-    <div class="span4 blogs-bloc">
+    <div class="span4 blogs-bloc tv-bloc">
       <div class="padding20">
         <span class="bloc-title">
           {% editable_short_text "geek_blog_title", hint: "Geek Blog Title", priority: 56 %}
@@ -48,20 +54,30 @@
 
         <span class="bloc-section-title list-tv">Title of the post</span>
         <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+
+        <span class="read-more">
+          {% editable_short_text "read_more_geek_blog", hint: "Read More Geek Blog", priority: 54 %}
+            Read More
+          {% endeditable_short_text %}
+        </span>
         <!-- End content -->
       </div>
     </div>
 
-    <div class="span4 blogs-bloc">
+    <div class="span4 blogs-bloc social-networks-bloc">
       <div class="padding20">
         <span class="bloc-title">
-          {% editable_short_text "follow_us_title", hint: "Follow Us Title", priority: 54 %}
+          {% editable_short_text "follow_us_title", hint: "Follow Us Title", priority: 53 %}
             Follow Us
           {% endeditable_short_text %}
         </span>
 
         <!-- This content is supposed to be loaded from a collection in the end -->
-        
+        {% editable_long_text "social_networks_info", hint: "Social Networks Info", priority: 52 %}
+          <span class="card-info twitter">@applidget</span><br />
+          <span class="card-info facebook">/applidget</span><br />
+          <span class="card-info linkedin">/applidget.in</span>
+        {% endeditable_long_text %}
         <!-- End content -->
       </div>
     </div>
