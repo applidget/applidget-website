@@ -48,6 +48,21 @@ $image-list: (applidget, blogs, contact, events, team, technologies);  // TODO(s
   }
 }
 
+@mixin after-before-content($content, $display, $position, $background, $top, $right, $bottom, $left){
+  content: $content;
+  display: $display;
+  position: $position;
+  background: $background;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin list-icon($type, $x:top) {
+  background: url("/images/list-icon-#{$type}.png") no-repeat $x left;
+}
+
 /* Fonts */
 @font-face {
   font-family: 'gothamrnd_book';
