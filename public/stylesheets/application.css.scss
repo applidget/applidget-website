@@ -339,6 +339,7 @@ body {
 #section-team {
   background: #e5e5e5 url('/images/team-bg.png') repeat-x top center;
   margin-top: 0px;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 3px #707070;
 
   h1 {
@@ -388,6 +389,67 @@ body {
   display: block;
   position: absolute;
   background: url('/images/dented-team.png') repeat-x top left;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#section-blogs {
+  background: #e5e5e5 url('/images/sunrise-effect-orange.png') repeat-x top center;
+  margin-top: 0px;
+  text-shadow: 1px 1px 3px #707070;
+
+  h1 {
+    margin-top: 100px;
+  }
+
+  .blog-pages, .social-networks {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .blog-pages {
+    padding-top: 50px;
+  }
+
+  .blogs-bloc {
+    min-height: 300px;
+    color: #8d8d8d;
+    text-shadow: none;
+    line-height: 1.8em;
+    background-color: #FFFFFF;
+    @include border-radius(4px);
+    @include box-shadow(inset 0 0 6px #8D8D8D);
+
+    .bloc-title {
+      display: block;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .bloc-section-title {
+      display: block;
+      padding-left: 25px;
+      text-decoration: underline;
+    }
+
+    .bloc-section-description {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .list-suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
+    .list-tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
+  }
+}
+
+#section-blogs:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url('/images/dented-blogs.png') repeat-x top left;
   top: -5px;
   right: 0;
   bottom: 0;
@@ -484,6 +546,14 @@ body {
 
   #section-team {
     .team-bloc {
+      font-size: 0.9em;
+
+      .bloc-section-description { line-height: 1.5em; }
+    }
+  }
+
+  #section-blogs {
+    .blogs-bloc {
       font-size: 0.9em;
 
       .bloc-section-description { line-height: 1.5em; }
@@ -613,6 +683,19 @@ body {
       min-height: inherit;
     }
   }
+
+  #section-blogs {
+    h1 {
+      margin-top: 22px;
+      margin-bottom: 45px;
+    }
+
+    .blogs-bloc {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      min-height: inherit;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -635,7 +718,8 @@ body {
   #section-technologies, 
   #section-technologies-description,
   #section-event-solutions,
-  #section-team {
+  #section-team,
+  #section-blogs {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -663,6 +747,12 @@ body {
   }
 
   #section-team {
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+
+  #section-blogs {
     h1 {
       margin-bottom: 30px;
     }

@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="span4 hidden-phone blog-pages">
+      {{ "blogs-pages-icon.png" || theme_image_tag }}
+    </div>
+    <div class="span4">
+      <h1>
+      {% editable_short_text "blogs_title", hint: "Blogs Title", priority: 60 %}
+        Our Blogs
+      {% endeditable_short_text %}
+      </h1>
+    </div>
+    <div class="span4 hidden-phone social-networks">
+      {{ "social-networks-icon.png" || theme_image_tag }}
+    </div>    
+  </div>
+
+  <div class="row">
+    <div class="span4 blogs-bloc">
+      <div class="padding20">
+        <span class="bloc-title">
+          {% editable_short_text "biz_blog_title", hint: "Biz Blog Title", priority: 58 %}
+            Biz Blog
+          {% endeditable_short_text %}
+        </span>
+
+        <!-- This content is supposed to be loaded from a collection in the end -->
+        <span class="bloc-section-title list-suitcase">Title of the post</span>
+        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+
+        <span class="bloc-section-title list-suitcase">Title of the post</span>
+        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        <!-- End content -->
+      </div>
+    </div>
+
+    <div class="span4 blogs-bloc">
+      <div class="padding20">
+        <span class="bloc-title">
+          {% editable_short_text "geek_blog_title", hint: "Geek Blog Title", priority: 56 %}
+            Geek Blog
+          {% endeditable_short_text %}
+        </span>
+
+        <!-- This content is supposed to be loaded from a collection in the end -->
+        <span class="bloc-section-title list-tv">Title of the post</span>
+        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+
+        <span class="bloc-section-title list-tv">Title of the post</span>
+        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        <!-- End content -->
+      </div>
+    </div>
+
+    <div class="span4 blogs-bloc">
+      <div class="padding20">
+        <span class="bloc-title">
+          {% editable_short_text "follow_us_title", hint: "Follow Us Title", priority: 54 %}
+            Follow Us
+          {% endeditable_short_text %}
+        </span>
+
+        <!-- This content is supposed to be loaded from a collection in the end -->
+        
+        <!-- End content -->
+      </div>
+    </div>
+  </div>
+</div>
