@@ -1,9 +1,5 @@
 @import "base";
 
-#header {
-  display: none;
-}
-
 .wufoo {
   ul {
     li {
@@ -17,6 +13,7 @@
     li.error {
       margin-bottom: 0px !important;
       background-color: #fbdac8 !important;
+      @include border-radius(6px);
       
       .desc, span.req, p.error {
         color: #D95C41 !important;
@@ -61,6 +58,10 @@
   .buttons {
     padding: 6px;
   }
+}
+
+#header {
+  display: none;
 }
 
 #errorLi {

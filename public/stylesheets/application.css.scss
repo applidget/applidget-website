@@ -426,6 +426,26 @@ body {
   }
 }
 
+#top-scroll {
+  display: none;
+  z-index: 999;
+  opacity: .6;
+  position: fixed;
+  top: 100%;
+  margin-top: -80px;
+  left: 100%;
+  margin-left: -145px;
+  @include border-radius(5px);
+  width: 150px;
+  line-height: 45px;
+  height: 45px;
+  padding: 2px;
+  background-color: #000;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 #section-footer:before {
   @include after-before-content('', block, absolute, url('/images/footer-effect.png') repeat-x top left, -29px, 0, 0, 0);
 }
