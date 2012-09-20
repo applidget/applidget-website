@@ -1,0 +1,68 @@
+@import "base";
+
+#header {
+  display: none;
+}
+
+.wufoo {
+  ul {
+    li {
+      padding-bottom: 2px;
+
+      span.req {
+        color: #3D3D3D !important;
+      }
+    }
+
+    li.error {
+      margin-bottom: 0px !important;
+      background-color: #fbdac8 !important;
+      
+      .desc, span.req, p.error {
+        color: #D95C41 !important;
+      }
+    }
+  }
+
+  input.text,
+  textarea.textarea,
+  input.btTxt {
+    @include border-radius(6px);
+    border: 1px solid #9f9f9f;
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  textarea.textarea {
+    min-width: 94%;
+  }
+
+  input.text,
+  textarea.textarea {
+    @include box-shadow(inset 1px 2px 5px #BABABA);
+    width: 94%;
+  }
+
+  input.btTxt {
+    width: 100%;
+    color: #d95c41;
+    font-size: 1.3em;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    background-color:#FFF;
+    font-family: "museo-300";
+    @include background-image(linear-gradient(color-stops(#FFFFFF, #F2F2F2)));
+    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffFFFFFF',endColorstr='#ffF2F2F2',GradientType=0);
+    filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+    cursor: pointer;
+    @include box-shadow(0px 1px 2px #888888);
+  }
+
+  .buttons {
+    padding: 6px;
+  }
+}
+
+#errorLi {
+  display: none;
+}
