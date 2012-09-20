@@ -15,7 +15,7 @@ body {
 .inline-to-block { display: inline; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
-$icon-center-classes-list: (team, suitcase, tv);
+$icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
 
 @each $selector in $icon-classes-list {
   .#{$selector} { @include list-icon($selector); }
@@ -24,11 +24,6 @@ $icon-center-classes-list: (team, suitcase, tv);
 @each $selector in $icon-center-classes-list {
   .#{$selector} { @include list-icon($selector, center); }
 }
-
-.email-medium { background: url('/images/list-icon-mail-medium.png') no-repeat center left; }
-.phone-medium { background: url('/images/list-icon-phone-medium.png') no-repeat center left; }
-.location-medium { background: url('/images/list-icon-location-medium.png') no-repeat center left; }
-.heart-medium { background: url('/images/list-icon-heart-medium.png') no-repeat center left; }
 
 .read-more {
   display: block;
