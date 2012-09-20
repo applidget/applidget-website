@@ -59,6 +59,10 @@ $image-list: (applidget, blogs, contact, events, team, technologies);  // TODO(s
   left: $left;
 }
 
+@mixin list-icon($type, $x:top) {
+  background: url("/images/list-icon-#{$type}.png") no-repeat $x left;
+}
+
 /* Fonts */
 @font-face {
   font-family: 'gothamrnd_book';

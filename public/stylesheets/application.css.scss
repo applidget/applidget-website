@@ -14,16 +14,16 @@ body {
 .padding20 { padding: 20px; }
 .inline-to-block { display: inline; }
 
-.email { background: url('/images/list-icon-mail.png') no-repeat top left; }
-.phone { background: url('/images/list-icon-phone.png') no-repeat top left; }
-.company { background: url('/images/list-icon-company.png') no-repeat top left; }
-.position { background: url('/images/list-icon-position.png') no-repeat top left; }
-.team { background: url('/images/list-icon-people.png') no-repeat center left; }
-.suitcase { background: url('/images/list-icon-suitcase.png') no-repeat center left; }
-.tv { background: url('/images/list-icon-tv.png') no-repeat center left; }
-.twitter { background: url('/images/list-icon-twitter.png') no-repeat top left; }
-.facebook { background: url('/images/list-icon-facebook.png') no-repeat top left; }
-.linkedin { background: url('/images/list-icon-linkedin.png') no-repeat top left; }
+$icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
+$icon-center-classes-list: (team, suitcase, tv);
+
+@each $selector in $icon-classes-list {
+  .#{$selector} { @include list-icon($selector); }
+}
+
+@each $selector in $icon-center-classes-list {
+  .#{$selector} { @include list-icon($selector, center); }
+}
 
 .email-medium { background: url('/images/list-icon-mail-medium.png') no-repeat center left; }
 .phone-medium { background: url('/images/list-icon-phone-medium.png') no-repeat center left; }
