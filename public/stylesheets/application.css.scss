@@ -12,10 +12,12 @@ body {
 .bold-grey { color: #464646; }
 .center { text-align: center; }
 .padding20 { padding: 20px; }
+.marginTop20 { margin-top: 20px; }
 .inline-to-block { display: inline; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
 $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
+$icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase, tv);
 
 @each $selector in $icon-classes-list {
   .#{$selector} { @include list-icon($selector); }
@@ -23,6 +25,10 @@ $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, loca
 
 @each $selector in $icon-center-classes-list {
   .#{$selector} { @include list-icon($selector, center); }
+}
+
+@each $selector in $icon-medium-classes-list {
+  .#{$selector}-bloc { background-image: url("/images/icon-#{$selector}-medium.png"); }
 }
 
 .read-more {
@@ -248,6 +254,41 @@ $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, loca
     margin-bottom: 20px;
   }
 
+  .info-bloc {
+    img {
+      height: 80px;
+      width: 80px;
+      @include border-radius(14px);
+      @include box-shadow(1px 1px 5px #9A9A9A);
+    }
+
+    .bloc-section-description {
+      line-height: 1.5em;
+    }
+  }
+
+  .img-right {
+    .bloc-title {
+      text-align: left;
+    }
+
+    img {
+      float: right;
+      margin-left: 16px;
+    }      
+  }
+
+  .img-left {
+    .bloc-title {
+      text-align: right;
+    }
+
+    img {
+      float: left;
+      margin-right: 16px;
+    }
+  }
+
   .business-card {
     background: url('/images/business-card.png') no-repeat top center;
     background-size: contain;
@@ -371,15 +412,6 @@ $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, loca
     padding-left: 1.8em;
     margin-bottom: 0;
   }
-
-  .social-networks-bloc, .suitcase-bloc, .tv-bloc {
-    background-repeat: no-repeat;
-    background-position: 90% 102%;
-  }
-
-  .social-networks-bloc { background-image: url("/images/social-networks-falling.png"); }
-  .suitcase-bloc { background-image: url("/images/icon-suitcase-medium.png"); }
-  .tv-bloc { background-image: url("/images/icon-tv-medium.png"); }
 }
 
 #section-blogs:before {
@@ -522,6 +554,13 @@ $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, loca
 
     .yes {
       margin-bottom: -1px;
+    }
+  }
+
+  #section-event-solutions,
+  #section-blogs {
+    .info-bloc {
+      min-height: 330px;
     }
   }
 }
