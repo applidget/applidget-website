@@ -85,15 +85,18 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   color: $grey;
   font-size: 1.2em;
   padding-bottom: 20px;
+  margin-top: 1em;
 
   .brand {
     margin-left: -40px; // Align applidget logo to the left side of the grid.
   }
-
   .navbar-inner, .active a {
     background: transparent;
     border: none;
     @include box-shadow(none);
+  }
+  .nav-collapse a {
+    font-weight: normal;
   }
   .active a {
     color: black;
@@ -479,8 +482,6 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
 @media(min-width: 980px) {
   #main-navbar {
-    margin-top: 1em;
-
     .nav-collapse {
       margin-top: 1.5em;
       float: right;
@@ -489,6 +490,12 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 @media (min-width: 768px) and (max-width: 980px) { 
+  #main-navbar {
+    .brand {
+      margin-left: -30px; // Align applidget logo to the left side of the grid.
+    }
+  }
+
   #section-stickers {
     .shadow-down {
       bottom: -47px;
@@ -566,6 +573,12 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 @media (max-width: 767px) {
+  #main-navbar {
+    .brand {
+      margin-left: -10px; // Align applidget logo to the left side of the grid.
+    }
+  }
+
   #section-why-choose {
     padding-bottom: 5px;
 
