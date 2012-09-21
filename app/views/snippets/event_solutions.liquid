@@ -15,12 +15,9 @@
   <div class="row">
     <div class="span6 info-bloc mobicheckin-bloc img-left">
       <div class="padding20">
+        <!-- This content is supposed to be loaded from a collection in the end -->
         {{ "mobicheckin-icon.png" || theme_image_tag }}
-        <span class="bloc-title">
-          {% editable_short_text "mobicheckin_title", hint: "Mobicheckin", priority: 79 %}
-            MobiCheckin
-          {% endeditable_short_text %}
-        </span>
+        <span class="bloc-title">MobiCheckin</span>
 
         <span class="bloc-section-description">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -31,21 +28,17 @@
         </span>
 
         <span class="read-more">
-          {% editable_short_text "read_more_mobicheckin", hint: "Read More", priority: 79 %}
-            <a href="#">Read More</a>
-          {% endeditable_short_text %}
+          <a href="#">Read More</a>
         </span>
+        <!-- End Content -->
       </div>
     </div>
 
     <div class="span6 info-bloc mobinetwork-bloc img-right">
       <div class="padding20">
+        <!-- This content is supposed to be loaded from a collection in the end -->
         {{ "mobinetwork-icon.png" || theme_image_tag }}
-        <span class="bloc-title">
-          {% editable_short_text "mobinetwork_title", hint: "Mobinetwork Title", priority: 78 %}
-            MobiNetwork
-          {% endeditable_short_text %}
-        </span>
+        <span class="bloc-title">MobiNetwork</span>
 
         <span class="bloc-section-description">
           Ut enim ad minim veniam,
@@ -55,10 +48,9 @@
         </span>
 
         <span class="read-more">
-          {% editable_short_text "read_more_mobinetwork", hint: "Read More", priority: 78 %}
-            <a href="#">Read More</a>
-          {% endeditable_short_text %}
+          <a href="#">Read More</a>
         </span>
+        <!-- End Content -->
       </div>
     </div>
   </div>
