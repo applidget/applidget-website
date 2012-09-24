@@ -127,16 +127,14 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     margin-top: 23px;
     margin-bottom: 35px;
   }
+}
 
-  .shadow-up {
-    margin-top: -36px;
-  }
-  
-  .shadow-down {
-    position: absolute;
-    bottom: -54px;
-    width: 100%;
-  }
+#section-stickers:before {
+  @include after-before-content("", block, absolute, url('/images/shadow-up.png') no-repeat top center, -14px, 0, 0, 0);
+}
+
+#section-stickers:after {
+  @include after-before-content("", block, absolute, url('/images/shadow-down.png') no-repeat bottom center, 0, 0, -32px, 0);
 }
 
 #section-why-choose {
@@ -496,12 +494,6 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     }
   }
 
-  #section-stickers {
-    .shadow-down {
-      bottom: -47px;
-    }
-  }
-
   #section-why-choose {
     p {
       font-size: 0.9em;
@@ -708,20 +700,9 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  #section-stickers {
-    .shadow-down {
-      bottom: -45px;
-    }
-  }
 }
 
 @media (max-width: 480px) { 
-  #section-stickers {
-    .shadow-down {
-      bottom: -32px;
-    }
-  }
-
   #section-stickers h1, 
   #section-why-choose, 
   #section-technologies, 
