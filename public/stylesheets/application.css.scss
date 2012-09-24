@@ -14,6 +14,8 @@ body {
 .padding20 { padding: 20px; }
 .marginTop20 { margin-top: 20px; }
 .inline-to-block { display: inline; }
+.align-right { text-align: right; }
+.align-left { text-align: left; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
 $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
@@ -484,6 +486,70 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   @include after-before-content('', block, absolute, url('/images/footer-effect.png') repeat-x top left, -29px, 0, 0, 0);
 }
 
+#main-why-choose {
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  @include border-radius(5px);
+  margin-bottom: 80px;
+
+  .span12 {
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  .span5 {
+    display: table-row;
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  .row:last-child {
+    .span12 {
+      border-bottom: none;
+    }
+  }
+
+  .bloc-header,
+  .bloc-description {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .bloc-illustration {
+    display: block;
+    float: left;
+    height: 65px;
+    margin-right: 20px;
+    text-align: center;
+    width: 50px;
+  }
+
+  .bloc-title {
+    color: #D64727;
+    font-size: 1.8em;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .bloc-subtitle {
+    color: #000000;
+    font-size: 0.9em;
+  }
+
+  .bloc-description {
+    color: #707070;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+}
+
+#main-why-choose > .row {
+    padding-top: 40px;
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     .nav-collapse {
@@ -702,6 +768,11 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     .menu {
       margin-top: 20px;
     }
+  }
+
+  #main-why-choose {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
