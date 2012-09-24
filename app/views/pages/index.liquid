@@ -21,7 +21,7 @@
     {% inline_editor %}
   </head>
   <body>
-    
+    <div id="top"></div>    
 
     <div class="container">
 
@@ -51,18 +51,18 @@
           
           <div class="row">
             <div class="span4">
-              <a href="#" class="stickers-sprite stickers-applidget" rel="touch-sprite" data-selector="applidget">What We Do</a>
-              <a href="#" class="stickers-sprite stickers-events" rel="touch-sprite" data-selector="events">Events</a>
+              <a href="#section-why-choose" class="anchor-link stickers-sprite stickers-applidget" rel="touch-sprite" data-selector="applidget">What We Do</a>
+              <a href="#section-event-solutions" class="anchor-link stickers-sprite stickers-events" rel="touch-sprite" data-selector="events">Events</a>
             </div>
             
             <div class="span4">
-              <a href="#" class="stickers-sprite stickers-contact" rel="touch-sprite" data-selector="contact">Contact</a>
-              <a href="#" class="stickers-sprite stickers-team" rel="touch-sprite" data-selector="team">Team</a>
+              <a href="#section-footer" class="anchor-link stickers-sprite stickers-contact" rel="touch-sprite" data-selector="contact">Contact</a>
+              <a href="#section-team" class="anchor-link stickers-sprite stickers-team" rel="touch-sprite" data-selector="team">Team</a>
             </div>
             
             <div class="span4">
-              <a href="#" class="stickers-sprite stickers-technologies" rel="touch-sprite" data-selector="technologies">Technologies</a>
-              <a href="#" class="stickers-sprite stickers-blogs" rel="touch-sprite" data-selector="blogs">Blogs</a>              
+              <a href="#section-technologies" class="anchor-link stickers-sprite stickers-technologies" rel="touch-sprite" data-selector="technologies">Technologies</a>
+              <a href="#section-blogs" class="anchor-link stickers-sprite stickers-blogs" rel="touch-sprite" data-selector="blogs">Blogs</a>              
             </div>
           </div>
           
@@ -145,8 +145,19 @@
       
     {% endblock %}
 
+    <div class="jumbotron" id ="section-footer">
+      {% include 'footer' %}
+    </div>
+
+    <a href="#top" id ="top-scroll" class="anchor-link">
+      {% editable_short_text "back_to_top_title", hint: "Back to Top", priority: 1 %}
+        Back to top
+      {% endeditable_short_text %}
+    </a>
+
     <!-- Le javascripts -->
-    {{'jquery.min' | javascript_tag }}
+    {{ 'jquery.min' | javascript_tag }}
+    {{ 'jquery.anchor' | javascript_tag }}
     {{ 'bootstrap.min.js' | javascript_tag}}
     {{ 'application' | javascript_tag }}
   </body>
