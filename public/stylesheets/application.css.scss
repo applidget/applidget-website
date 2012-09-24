@@ -79,6 +79,12 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   *background-color:#d54124;
 }
 
+.header {
+  #section-why-choose {
+    padding-top: 0;
+  }
+}
+
 // Top navigation menu
 #main-navbar {
   font-family: 'museo500';

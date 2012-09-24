@@ -1,7 +1,23 @@
 {% extends index %}
 
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron" id="section-why-choose">
+      <div class="container">
+        {% include 'topmenu' %}
+      </div>
+
+      <div class="container">
+        {% include 'what_we_do' %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
 {% block 'main' %}
 
-  TODO: Spirit
+  TODO : SPIRIT
 
 {% endblock %}
