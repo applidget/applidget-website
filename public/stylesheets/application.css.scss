@@ -12,9 +12,10 @@ body {
 .bold-grey { color: #464646; }
 .center { text-align: center; }
 .padding20 { padding: 20px; }
+.inline-to-block { display: inline; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
-$icon-center-classes-list: (team, suitcase, tv);
+$icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
 
 @each $selector in $icon-classes-list {
   .#{$selector} { @include list-icon($selector); }
@@ -385,6 +386,65 @@ $icon-center-classes-list: (team, suitcase, tv);
   @include after-before-content('', block, absolute, url('/images/dented-blogs.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
+#section-footer {
+  background: #cccccc;
+  color: #3d3d3d;
+  text-shadow: 1px 0px 1px #FFFFFF;
+  margin-top: 40px;
+  padding-bottom: 50px;
+
+  h1 {
+    color: #252525;
+    margin-bottom: 45px;
+  }
+
+  .copyrights {
+    font-size: 0.8em;
+    color: #939393;
+    text-shadow: none;
+    line-height: 1.4em;
+  }
+
+  .nav {
+    margin-bottom: 0;
+    
+    li {
+      display: inline;
+
+      a {
+        display: inline;
+        color: #3d3d3d;
+        font-size: 0.9em;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+#top-scroll {
+  display: none;
+  z-index: 999;
+  opacity: .6;
+  position: fixed;
+  top: 100%;
+  margin-top: -80px;
+  left: 100%;
+  margin-left: -145px;
+  @include border-radius(5px);
+  width: 150px;
+  line-height: 45px;
+  height: 45px;
+  padding: 2px;
+  background-color: #000;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#section-footer:before {
+  @include after-before-content('', block, absolute, url('/images/footer-effect.png') repeat-x top left, -29px, 0, 0, 0);
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     margin-top: 1em;
@@ -581,6 +641,18 @@ $icon-center-classes-list: (team, suitcase, tv);
     margin-top: 22px;
     margin-bottom: 45px;
   }
+
+  #section-footer {
+    #contact-form {
+      margin-top: 30px;
+    }
+  }
+
+  #section-footer {
+    .menu {
+      margin-top: 20px;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -591,7 +663,7 @@ $icon-center-classes-list: (team, suitcase, tv);
   }
 }
 
-@media (max-width: 480px) {  
+@media (max-width: 480px) { 
   #section-stickers {
     .shadow-down {
       bottom: -32px;
@@ -604,7 +676,8 @@ $icon-center-classes-list: (team, suitcase, tv);
   #section-technologies-description,
   #section-event-solutions,
   #section-team,
-  #section-blogs {
+  #section-blogs,
+  #section-footer {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -632,4 +705,8 @@ $icon-center-classes-list: (team, suitcase, tv);
   #section-blogs h1 {
     margin-bottom: 30px;
   }
+}
+
+@media (max-width: 320px) {
+  .inline-to-block { display: block; }
 }

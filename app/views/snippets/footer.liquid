@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>
+      {% editable_short_text "contact_title", hint: "Contact Title", priority: 50 %}
+        Get in Touch
+      {% endeditable_short_text %}
+      </h1>
+    </div>   
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <span class="list-info-medium email-medium">
+        {% editable_short_text "email_us_title", hint: "Email Us", priority: 49 %}
+          E-mail us: info@applidget.com
+        {% endeditable_short_text %}
+      </span><br />
+      <span class="list-info-medium phone-medium">
+        {% editable_short_text "call_us_title", hint: "Call Us", priority: 48 %}
+          Call us: 555 456
+        {% endeditable_short_text %}
+      </span><br />
+      <span class="list-info-medium location-medium">
+        {% editable_short_text "location_title", hint: "Location", priority: 47 %}
+          Fake Street 654, ST, Country
+        {% endeditable_short_text %}
+      </span><br />
+      <br />
+      <span class="list-info-medium heart-medium">
+        {% editable_short_text "go_social_title", hint: "Go Social", priority: 46 %}
+          Go Social:
+        {% endeditable_short_text %}
+        <span class="inline-to-block medium-img">
+          {{ "icon-facebook-big-colored.png" | theme_image_tag }}
+          {{ "icon-twitter-big-colored.png" | theme_image_tag }}
+          {{ "icon-linkedin-big-colored.png" | theme_image_tag }}
+        </span>
+      </span>
+    </div>
+
+    <div class="span6" id="contact-form">
+      <iframe height="480" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://applidget.wufoo.com/embed/q7w9k9/"><a href="https://applidget.wufoo.com/forms/q7w9k9/">Fill out our contact form!</a></iframe>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span4 copyrights">
+      {% editable_short_text "copyrights_title", hint: "Copyrights", priority: 45 %}
+          Applidget 2012 (c) All Rights Reserved
+      {% endeditable_short_text %}
+    </div>
+    <div class="span8 menu">
+      {% nav site, class: 'nav', active_class: 'active', bootstrap: true %}
+    </div>
+  </div>
+</div>
