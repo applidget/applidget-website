@@ -11,8 +11,8 @@ body {
 .light-orange { color: #d64727; }
 .bold-grey { color: #464646; }
 .center { text-align: center; }
-.padding20 { padding: 20px; }
-.marginTop20 { margin-top: 20px; }
+.padded { padding: 20px; }
+.spacer { height: 20px; }
 .inline-to-block { display: inline; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
