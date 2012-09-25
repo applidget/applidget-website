@@ -14,6 +14,7 @@ body {
 .padded { padding: 20px; }
 .spacer { height: 20px; }
 .inline-to-block { display: inline; }
+.clear { clear: both; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
 $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
@@ -77,6 +78,22 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 .btn-red:hover,.btn-red:active,.btn-red.active,.btn-red.disabled,.btn-red[disabled] {
   background-color:#d54124;
   *background-color:#d54124;
+}
+
+.header {
+  #section-why-choose {
+    padding-top: 0;
+  }
+}
+
+.picture-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.picture-left {
+  float: left;
+  margin-right: 20px;
 }
 
 // Top navigation menu
@@ -478,6 +495,73 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   @include after-before-content('', block, absolute, url('/images/footer-effect.png') repeat-x top left, -29px, 0, 0, 0);
 }
 
+#main-why-choose {
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  @include border-radius(5px);
+  margin-bottom: 80px;
+
+  .span12 {
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  .row:last-child {
+    .span12 {
+      border-bottom: none;
+    }
+  }
+
+  .bloc-text {
+    width: 540px;
+  }
+
+  .bloc-header,
+  .bloc-description {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .bloc-icon {
+    display: block;
+    float: left;
+    height: 65px;
+    margin-right: 20px;
+    text-align: center;
+    width: 50px;
+  }
+
+  .bloc-title {
+    color: #D64727;
+    font-size: 1.8em;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .bloc-subtitle {
+    color: #000000;
+    font-size: 0.9em;
+  }
+
+  .bloc-description {
+    color: #707070;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  .bloc-illustration {
+    display: table-row;
+    width: 380px;
+
+    img { vertical-align: bottom; }
+  }
+}
+
+#main-why-choose > .row {
+    padding-top: 40px;
+}
+
 @media(min-width: 980px) {
   #main-navbar {
     .nav-collapse {
@@ -562,9 +646,31 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
       min-height: 330px;
     }
   }
+
+  #main-why-choose {
+    .bloc-illustration {
+      width: 290px;
+    }
+
+    .bloc-text {
+      width: 414px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  .picture-right {
+    float: none;
+    margin-left: 0px;
+    text-align: right;
+  }
+
+  .picture-left {
+    float: none;
+    margin-right: 0px;
+    text-align: left;
+  }
+
   #main-navbar {
     .brand {
       margin-left: -10px; // Align applidget logo to the left side of the grid.
@@ -695,6 +801,17 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #section-footer {
     .menu {
       margin-top: 20px;
+    }
+  }
+
+  #main-why-choose {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .bloc-illustration,
+    .bloc-text {
+      display: block;
+      width: 100%;
     }
   }
 }
