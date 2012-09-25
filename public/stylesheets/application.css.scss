@@ -81,8 +81,15 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 .header {
-  #section-why-choose {
+  #section-why-choose,
+  #section-technologies {
     padding-top: 0;
+  }
+
+  #section-technologies{
+    h1 {
+      margin-top: 0;
+    }
   }
 }
 
@@ -94,6 +101,27 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 .picture-left {
   float: left;
   margin-right: 20px;
+}
+
+.dark-menu {
+  #main-navbar {
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-shadow: 0 1px 0 #000000;
+    }
+
+    a:hover {
+      color: #333333;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+
+    .active a {
+      color: #000000;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+  }
 }
 
 // Top navigation menu

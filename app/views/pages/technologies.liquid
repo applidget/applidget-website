@@ -1,7 +1,25 @@
 {% extends index %}
 
-{% block 'main' %}
+{% block 'header' %}
 
-  TODO: Technologies
+  <div class="header">
+    <div class="jumbotron" id="section-technologies">
+      <div class="container dark-menu">
+        {% assign url = 'applidget-logo/grey.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      {% include 'technologies' %}
+    </div>
+  </div>
 
 {% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="section-technologies-description">
+    {% include 'technologies_description' %}
+  </div>
+
+{% endblock %}
+
