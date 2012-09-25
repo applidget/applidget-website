@@ -49,7 +49,6 @@ function fix(){
     meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
     document.removeEventListener(type, fix, !0);
 }
-  
 
 if((meta = meta[meta.length - 1]) && document[addEvent]) {
   fix();
