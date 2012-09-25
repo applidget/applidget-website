@@ -14,6 +14,7 @@ body {
 .padding20 { padding: 20px; }
 .marginTop20 { margin-top: 20px; }
 .inline-to-block { display: inline; }
+.clear { clear: both; }
 
 $icon-classes-list: (email, phone, company, position, twitter, facebook, linkedin);
 $icon-center-classes-list: (team, suitcase, tv, email-medium, phone-medium, location-medium, heart-medium);
@@ -510,17 +511,14 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     }
   }
 
+  .bloc-text {
+    width: 540px;
+  }
+
   .bloc-header,
   .bloc-description {
     padding-left: 30px;
     padding-right: 20px;
-  }
-
-  .bloc-illustration {
-    display: table-row;
-    width: 380px;
-
-    img { vertical-align: bottom; }
   }
 
   .bloc-icon {
@@ -550,6 +548,13 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     line-height: 1.8em;
     padding-top: 15px;
     padding-bottom: 30px;
+  }
+
+  .bloc-illustration {
+    display: table-row;
+    width: 380px;
+
+    img { vertical-align: bottom; }
   }
 }
 
@@ -646,6 +651,10 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     .bloc-illustration {
       width: 290px;
     }
+
+    .bloc-text {
+      width: 414px;
+    }
   }
 }
 
@@ -653,11 +662,13 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   .picture-right {
     float: none;
     margin-left: 0px;
+    text-align: right;
   }
 
   .picture-left {
     float: none;
     margin-right: 0px;
+    text-align: left;
   }
 
   #main-navbar {
@@ -797,11 +808,10 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     margin-left: 20px;
     margin-right: 20px;
 
-    .bloc-illustration {
+    .bloc-illustration,
+    .bloc-text {
       display: block;
       width: 100%;
-      margin-bottom: 20px;
-      text-align: center;
     }
   }
 }
