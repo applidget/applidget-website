@@ -24,12 +24,14 @@
 
       {% for project in contents.projects %}
 
+        {% if project.published %}
+
         <div class="row">
           <div class="span12">
             <div class="row">
               <div class="span7">
                 <div class="bloc-header">
-                  <span class="bloc-illustration">{{ project.icon.url | theme_image_tag }}</span>
+                  <span class="bloc-illustration">{{ project.icon.url | image_tag }}</span>
                   <span class="bloc-title">{{ project.title }}</span><br />
                   <span class="bloc-subtitle">{{ project.subtitle }}</span>
                 </div>
@@ -38,11 +40,13 @@
                 </div>
               </div>
               <div class="span5 hidden-phone align-right">
-                {{ project.picture.url | theme_image_tag }}
+                {{ project.picture.url | image_tag }}
               </div>
             </div>
           </div>
         </div>
+
+        {% endif %}
 
       {% endfor %}
 

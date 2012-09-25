@@ -1,6 +1,6 @@
 name: Projects
 description: Contains all the kinds of projects Applidget is able to do
-order_by: rank
+order_by: title
 slug: projects
 label_field_name: title
 fields:
@@ -8,28 +8,27 @@ fields:
     label: Title
     type: string
     hint: The title of the kind of project
+    localized: true
 - subtitle:
     label: Subtitle
     type: string
     hint: The subtitle of these projects
+    localized: true
 - body:
     label: Body
     type: text
     text_formatting: html
     hint: The description of these projects
-- posted_at:
-    label: Posted at
-    type: date
-    hint: The date when this bloc has been or will be posted.
-- rank:
-    label: Rank
-    type: integer
-    hint: The rank where this bloc will be displayed at.
+    localized: true
 - picture:
     label: Picture
     type: file
     hint: The illustration of the project
 - icon:
-    label: icon
+    label: Icon
     type: file
     hint: The icon of the project
+- published:
+    label: Published
+    type: boolean
+    localized: true

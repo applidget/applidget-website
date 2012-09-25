@@ -9,7 +9,7 @@ site:
   pages:
     - "index": # page path (the template can edited here app/views/pages/index.liquid)
       published: true
-    - "what_we_do":
+    - "what-we-do":
       published: true
     - "technologies":
       published: true

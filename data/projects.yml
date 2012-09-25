@@ -3,19 +3,16 @@ Online App:
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   picture: /images/illustration_1.png
   icon: /images/icon-imac-medium.png
-  rank: 1
-  posted_at: 2012-09-02
+  published: true
 iPhone App:
   subtitle: Excepteur sint occaecat cupidatat.
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   picture: /images/illustration_2.png
   icon: /images/icon-iphone-medium.png
-  rank: 2
-  posted_at: 2012-09-13
+  published: true
 iPad App:
   subtitle: Duis aute irure dolor in.
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   picture: /images/illustration_3.png
   icon: /images/icon-ipad-medium.png
-  rank: 3
-  posted_at: 2012-09-14
+  published: true
