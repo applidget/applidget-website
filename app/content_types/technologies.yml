@@ -1,0 +1,30 @@
+name: Technologies
+description: Contains every technology Applidget is using
+order_by: name
+slug: technologies
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    hint: The name of the technology
+    localized: true
+- subtitle:
+    label: Subtitle
+    type: string
+    hint: The subtitle of the technology
+    localized: true
+- body:
+    label: Body
+    type: text
+    text_formatting: html
+    hint: The description of the description
+    localized: true
+- picture:
+    label: Picture
+    type: file
+    hint: The illustration of the technology
+- published:
+    label: Published
+    type: boolean
+    localized: true
