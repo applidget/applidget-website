@@ -13,10 +13,57 @@
   </div>
 
   <div class="row">
+    <div class="span6 info-bloc mobicheckin-bloc img-left">
+      <div class="padded">
+        <!-- This content is supposed to be loaded from a collection in the end -->
+        {{ "mobicheckin-icon.png" || theme_image_tag }}
+        <span class="bloc-title">MobiCheckin</span>
+
+        <span class="bloc-section-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.
+        </span>
+
+        <span class="read-more">
+          <a href="#">Read More</a>
+        </span>
+        <!-- End Content -->
+      </div>
+    </div>
+
+    <div class="span6 info-bloc mobinetwork-bloc img-right">
+      <div class="padded">
+        <!-- This content is supposed to be loaded from a collection in the end -->
+        {{ "mobinetwork-icon.png" || theme_image_tag }}
+        <span class="bloc-title">MobiNetwork</span>
+
+        <span class="bloc-section-description">
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.
+        </span>
+
+        <span class="read-more">
+          <a href="#">Read More</a>
+        </span>
+        <!-- End Content -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="spacer"></div>
+  </div>
+
+  <div class="row">
     <div class="span8">
       <div class="business-card">
         <h3>
-          {% editable_short_text "business_card_name", hint: "Business Card Name", priority: 78 %}
+          {% editable_short_text "business_card_name", hint: "Business Card Name", priority: 77 %}
             Tristan Verdier
           {% endeditable_short_text %}
           <span class="icon-write"></span>
