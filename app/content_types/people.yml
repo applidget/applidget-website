@@ -1,0 +1,40 @@
+name: People
+description: Contains the Applidget team
+order_by: full_name
+slug: people
+label_field_name: full_name
+fields:
+- full_name:
+    label: Full Name
+    type: string
+- body:
+    label: Body
+    type: text
+    text_formatting: html
+    hint: The description of the person
+    localized: true
+- picture:
+    label: Picture
+    type: file
+- position:
+    label: Position
+    type: string
+    localized: true
+- twitter_username:
+    label: Twitter Username
+    type: string
+- linkedin_username:
+    label: LinkedIn Username
+    type: string
+- github_username:
+    label: Github Username
+    type: string
+- category:
+    label: Category
+    type: string
+    localized: true
+    hint: The main job of the person (Associate / Developer / Marketing / ...)
+- published:
+    label: Published
+    type: boolean
+    localized: true

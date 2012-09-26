@@ -1,0 +1,38 @@
+Tristan Verdier:
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br />
+        Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.
+  picture: /images/illustration_9.png
+  position: President
+  twitter_username: tristan_verdier
+  linkedin_username: tristan.verdier
+  category: Associate
+  published: true
+Romain Pechayre:
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  picture: /images/illustration_10.png
+  position: Directeur Technique
+  twitter_username: rpechayr
+  linkedin_username: rpechayr
+  github_username: rpechayr
+  category: Associate
+  published: true
+Sebastien Saunier:
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  position: Senior Developer
+  github_username: ssaunier
+  category: Developer
+  published: true
+Wilfried Deluche:
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  position: Web Developer
+  twitter_username: W_Deluche
+  github_username: WilfriedDeluche
+  category: Developer
+  published: true
+Jean-Marie Rolland:
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  position: Salesman
+  category: Marketing
+  published: true
+
