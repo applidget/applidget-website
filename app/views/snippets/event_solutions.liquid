@@ -32,7 +32,11 @@
               </span>
 
               <span class="read-more">
-                <a href="event_solutions#{{ solution._permalink }}">Read More</a>
+                <a href="event_solutions#{{ solution._permalink }}">
+                  {% editable_short_text "read_more_title", hint: "Read More", priority: 79 %}
+                    Read More
+                  {% endeditable_short_text %}
+                </a>
               </span>
             </div>
           </div>

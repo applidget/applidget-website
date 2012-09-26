@@ -32,11 +32,14 @@ fields:
     label: LinkUrl
     type: string
     hint: Link to be displayed as button
+    localized: true
 - link_text:
     label: LinkText
     type: string
     hint: Text of the button link
+    localized: true
 - home_page:
     label: FrontPage
     type: boolean
     hint: Specifies if the Solution appears on the home page
+    localized: true
