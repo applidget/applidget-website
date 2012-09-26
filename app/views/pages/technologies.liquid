@@ -21,46 +21,49 @@
     {% include 'technologies_description' %}
   </div>
 
-  <div class="container page" id="main-technologies">
+  <div class="jumbotron" id="main-technologies">
+    <div class="container page">
 
-    {% with_scope published: true %}
+      {% with_scope published: true %}
 
-      {% for techno in contents.technologies %}
+        {% for techno in contents.technologies %}
 
-        <div class="row">
-          <div class="span12">
+          <div class="row">
+            <div class="span12">
 
-            {% if techno.picture.url %}
-              {% assign classText = "bloc-text" %}
-            {% else %}
-              {% assign classText= "" %}
-            {% endif %}
+              {% if techno.picture.url %}
+                {% assign classText = "bloc-text" %}
+              {% else %}
+                {% assign classText= "" %}
+              {% endif %}
 
-            <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
-              <div class="bloc-header">
-                <span class="bloc-title">{{ techno.name }}</span><br />
-                <span class="bloc-subtitle">{{ techno.subtitle }}</span>
+              <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
+                <div class="bloc-header">
+                  <span class="bloc-title">{{ techno.name }}</span><br />
+                  <span class="bloc-subtitle">{{ techno.subtitle }}</span>
+                </div>
+
+                <div class="bloc-description">
+                  {{ techno.body }}
+                </div>
               </div>
 
-              <div class="bloc-description">
-                {{ techno.body }}
+              {% if techno.picture.url %}
+              <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
+                {{ techno.picture.url | image_tag }}
               </div>
+              {% endif %}
+
+              <div class="clear"></div>
+
             </div>
-
-            {% if techno.picture.url %}
-            <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
-              {{ techno.picture.url | image_tag }}
-            </div>
-            {% endif %}
-
-            <div class="clear"></div>
-
           </div>
-        </div>
 
-      {% endfor %}
+        {% endfor %}
 
-    {% endwith_scope %}
+      {% endwith_scope %}
+
+    </div>
   </div>
 
 {% endblock %}

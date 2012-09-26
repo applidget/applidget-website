@@ -18,7 +18,7 @@ fields:
     label: Body
     type: text
     text_formatting: html
-    hint: The description of the description
+    hint: The description of the technology
     localized: true
 - picture:
     label: Picture

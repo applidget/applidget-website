@@ -1,0 +1,71 @@
+{% extends index %}
+
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron" id="section-event-solutions">
+      <div class="container">
+        {% assign url = 'applidget-logo/orange.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      {% assign show_content = false %}
+      {% include 'event_solutions' %}
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="main-event-solutions">
+    <div class="container page">
+
+      {% with_scope published: true %}
+
+        {% for solution in contents.solutions %}
+
+          <div class="row" id="{{ solution._permalink }}">
+            <div class="span12">
+
+              {% if solution.picture.url %}
+                {% assign classText = "bloc-text" %}
+              {% else %}
+                {% assign classText= "" %}
+              {% endif %}
+
+              <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
+                <div class="bloc-header">
+                  <span class="bloc-title">{{ solution.name }}</span><br />
+                  <span class="bloc-subtitle">{{ solution.subtitle }}</span>
+                </div>
+
+                <div class="bloc-description">
+                  {{ solution.body }}
+                </div>
+                
+                <div class="bloc-buttons">
+                {% if solution.link_url %}
+                  <a href="{{ solution.link_url}}" class="btn btn-large btn-danger" target="_blank">{{ solution.link_text }}</a>
+                {% endif %}
+                </div>
+              </div>
+
+              {% if solution.picture.url %}
+              <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
+                {{ solution.picture.url | image_tag }}
+              </div>
+              {% endif %}
+
+              <div class="clear"></div>
+
+            </div>
+          </div>
+
+        {% endfor %}
+
+      {% endwith_scope %}
+    </div>
+  </div>
+
+{% endblock %}

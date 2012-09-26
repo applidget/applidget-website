@@ -13,5 +13,7 @@ site:
       published: true
     - "technologies":
       published: true
+    - "event_solutions":
+      published: true
     - "404":
       published: true

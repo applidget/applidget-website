@@ -12,47 +12,35 @@
     </div>
   </div>
 
+  {% if show_content %}
+
   <div class="row">
-    <div class="span6 info-bloc mobicheckin-bloc img-left">
-      <div class="padded">
-        <!-- This content is supposed to be loaded from a collection in the end -->
-        {{ "mobicheckin-icon.png" || theme_image_tag }}
-        <span class="bloc-title">MobiCheckin</span>
 
-        <span class="bloc-section-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur.
-        </span>
+    {% with_scope home_page:true, published:true %}
 
-        <span class="read-more">
-          <a href="#">Read More</a>
-        </span>
-        <!-- End Content -->
-      </div>
-    </div>
+        {% for solution in contents.solutions limit:2 %}
 
-    <div class="span6 info-bloc mobinetwork-bloc img-right">
-      <div class="padded">
-        <!-- This content is supposed to be loaded from a collection in the end -->
-        {{ "mobinetwork-icon.png" || theme_image_tag }}
-        <span class="bloc-title">MobiNetwork</span>
+          <div class="span6 info-bloc {{ solution._permalink }}-bloc {% cycle 'text_style': 'img-left', 'img-right' %}">
+            <div class="padded">
+              {% if solution.picture.url %}
+                {{ solution.picture.url || image_tag }}
+              {% endif %}
+              <span class="bloc-title">{{ solution.name }}</span>
 
-        <span class="bloc-section-description">
-          Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur.
-        </span>
+              <span class="bloc-section-description">
+                {{ solution.body | truncate: 300 }}
+              </span>
 
-        <span class="read-more">
-          <a href="#">Read More</a>
-        </span>
-        <!-- End Content -->
-      </div>
-    </div>
+              <span class="read-more">
+                <a href="event_solutions#{{ solution._permalink }}">Read More</a>
+              </span>
+            </div>
+          </div>
+
+        {% endfor %}
+
+    {% endwith_scope %}
+
   </div>
 
   <div class="row">
@@ -100,4 +88,6 @@
       </span>
     </div>
   </div>
+
+  {% endif %}
 </div>

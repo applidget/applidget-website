@@ -1,0 +1,42 @@
+name: Solutions
+description: Contains every event solution Applidget is offering
+order_by: name
+slug: solutions
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    hint: The name of the solution
+    localized: true
+- subtitle:
+    label: Subtitle
+    type: string
+    hint: The subtitle of the solution
+    localized: true
+- body:
+    label: Body
+    type: text
+    text_formatting: html
+    hint: The description of the solution
+    localized: true
+- picture:
+    label: Picture
+    type: file
+    hint: The illustration of the solution
+- published:
+    label: Published
+    type: boolean
+    localized: true
+- link_url:
+    label: LinkUrl
+    type: string
+    hint: Link to be displayed as button
+- link_text:
+    label: LinkText
+    type: string
+    hint: Text of the button link
+- home_page:
+    label: FrontPage
+    type: boolean
+    hint: Specifies if the Solution appears on the home page
