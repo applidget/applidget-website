@@ -1,7 +1,67 @@
 {% extends index %}
 
-{% block 'main' %}
+{% block 'header' %}
 
-  TODO: Technologies
+  <div class="header">
+    <div class="jumbotron" id="section-technologies">
+      <div class="container dark-menu">
+        {% assign url = 'applidget-logo/grey.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      {% include 'technologies' %}
+    </div>
+  </div>
 
 {% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="section-technologies-description">
+    {% include 'technologies_description' %}
+  </div>
+
+  <div class="container page" id="main-technologies">
+
+    {% with_scope published: true %}
+
+      {% for techno in contents.technologies %}
+
+        <div class="row">
+          <div class="span12">
+
+            {% if techno.picture.url %}
+              {% assign classText = "bloc-text" %}
+            {% else %}
+              {% assign classText= "" %}
+            {% endif %}
+
+            <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
+              <div class="bloc-header">
+                <span class="bloc-title">{{ techno.name }}</span><br />
+                <span class="bloc-subtitle">{{ techno.subtitle }}</span>
+              </div>
+
+              <div class="bloc-description">
+                {{ techno.body }}
+              </div>
+            </div>
+
+            {% if techno.picture.url %}
+            <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
+              {{ techno.picture.url | image_tag }}
+            </div>
+            {% endif %}
+
+            <div class="clear"></div>
+
+          </div>
+        </div>
+
+      {% endfor %}
+
+    {% endwith_scope %}
+  </div>
+
+{% endblock %}
+

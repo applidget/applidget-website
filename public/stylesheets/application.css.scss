@@ -32,6 +32,51 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   .#{$selector}-bloc { background-image: url("/images/icon-#{$selector}-medium.png"); }
 }
 
+
+/*** Page CSS ***/
+.page {
+  .bloc-text {
+    width: 540px;
+  }
+
+  .bloc-icon {
+    display: block;
+    float: left;
+    height: 65px;
+    margin-right: 20px;
+    text-align: center;
+    width: 50px;
+  }
+
+  .bloc-title {
+    color: #707070;
+    font-size: 1.8em;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .bloc-subtitle {
+    color: #000000;
+    font-size: 0.9em;
+  }
+
+  .bloc-description {
+    color: #707070;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  .bloc-illustration {
+    display: table-row;
+    width: 380px;
+
+    img { vertical-align: bottom; }
+  }
+}
+  /*** End ***/
+
 .read-more {
   display: block;
   margin-top: 20px;
@@ -81,8 +126,15 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 .header {
-  #section-why-choose {
+  #section-why-choose,
+  #section-technologies {
     padding-top: 0;
+  }
+
+  #section-technologies{
+    h1 {
+      margin-top: 0;
+    }
   }
 }
 
@@ -94,6 +146,27 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 .picture-left {
   float: left;
   margin-right: 20px;
+}
+
+.dark-menu {
+  #main-navbar {
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+      text-shadow: 0 1px 0 #000000;
+    }
+
+    a:hover {
+      color: #333333;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+
+    .active a {
+      color: #000000;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+  }
 }
 
 // Top navigation menu
@@ -511,55 +584,33 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     }
   }
 
-  .bloc-text {
-    width: 540px;
-  }
-
   .bloc-header,
   .bloc-description {
     padding-left: 30px;
     padding-right: 20px;
   }
 
-  .bloc-icon {
-    display: block;
-    float: left;
-    height: 65px;
-    margin-right: 20px;
-    text-align: center;
-    width: 50px;
-  }
-
   .bloc-title {
     color: #D64727;
-    font-size: 1.8em;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .bloc-subtitle {
-    color: #000000;
-    font-size: 0.9em;
-  }
-
-  .bloc-description {
-    color: #707070;
-    font-size: 0.8em;
-    line-height: 1.8em;
-    padding-top: 15px;
-    padding-bottom: 30px;
-  }
-
-  .bloc-illustration {
-    display: table-row;
-    width: 380px;
-
-    img { vertical-align: bottom; }
   }
 }
 
 #main-why-choose > .row {
-    padding-top: 40px;
+  padding-top: 40px;
+}
+
+#main-technologies {
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  .span12 {
+    border-top: 1px solid #D8D8D8;
+    padding: 20px 0;
+  }
+
+  .bloc-title {
+    color: #1053A6;
+  }  
 }
 
 @media(min-width: 980px) {
@@ -572,6 +623,16 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 }
 
 @media (min-width: 768px) and (max-width: 980px) { 
+  .page{
+    .bloc-illustration {
+      width: 290px;
+    }
+
+    .bloc-text {
+      width: 414px;
+    }
+  }
+
   #main-navbar {
     .brand {
       margin-left: -30px; // Align applidget logo to the left side of the grid.
@@ -646,19 +707,17 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
       min-height: 330px;
     }
   }
-
-  #main-why-choose {
-    .bloc-illustration {
-      width: 290px;
-    }
-
-    .bloc-text {
-      width: 414px;
-    }
-  }
 }
 
 @media (max-width: 767px) {
+  .page {
+    .bloc-illustration,
+    .bloc-text {
+      display: block;
+      width: 100%;
+    }
+  }
+
   .picture-right {
     float: none;
     margin-left: 0px;
@@ -807,16 +866,18 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #main-why-choose {
     margin-left: 20px;
     margin-right: 20px;
+  }
 
-    .bloc-illustration,
-    .bloc-text {
-      display: block;
-      width: 100%;
-    }
+  #main-technologies {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .picture-right, .picture-left { text-align: center; }
   }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+
 }
 
 @media (max-width: 480px) { 
