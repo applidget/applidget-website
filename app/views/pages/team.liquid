@@ -56,16 +56,23 @@
                   {{ person.body }}
                 </div>
                 
+                @{{ person.twitter_username }}
                 {% if person.twitter_username %}
-                  <a href="http://twitter.com/{{ person.twitter_username}}" class="list-info twitter" target="_blank">@{{ person.twitter_username }}</a>
+                  <a href="http://twitter.com/{{ person.twitter_username}}" class="list-info" target="_blank">
+                    {{ "icon-twitter-medium.png" || theme_image_tag }}
+                  </a>
                 {% endif %}
 
                 {% if person.linkedin_username %}
-                  <a href="http://linkedin.com/{{ person.linkedin_username}}" class="list-info linkedin" target="_blank">{{ person.linkedin_username }}</a>
+                  <a href="http://linkedin.com/{{ person.linkedin_username}}" class="list-info" target="_blank">
+                    {{ "icon-linkedin-medium.png" || theme_image_tag }}
+                  </a>
                 {% endif %}
 
                 {% if person.github_username %}
-                  <a href="http://github.com/{{ person.github_username}}" class="list-info github" target="_blank">@{{ person.github_username }}</a>
+                  <a href="http://github.com/{{ person.github_username}}" class="list-info" target="_blank">
+                    {{ "icon-github-medium.png" || theme_image_tag }}
+                  </a>
                 {% endif %}
               </div>
 
