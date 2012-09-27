@@ -7,6 +7,7 @@ Tristan Verdier:
   linkedin_profile_url: http://www.linkedin.com/profile/view?id=8193194
   category: Associate
   published: true
+  homepage: true
 Romain Pechayre:
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   picture: /images/illustration_10.png
@@ -16,12 +17,14 @@ Romain Pechayre:
   github_username: rpechayr
   category: Associate
   published: true
+  homepage: true
 Sebastien Saunier:
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   position: Senior Developer
   github_username: ssaunier
   category: Developer
   published: true
+  homepage: false
 Wilfried Deluche:
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   position: Web Developer
@@ -29,9 +32,11 @@ Wilfried Deluche:
   github_username: WilfriedDeluche
   category: Developer
   published: true
+  homepage: false
 Jean-Marie Rolland:
   body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   position: Salesman
   category: Marketing
   published: true
+  homepage: false
 

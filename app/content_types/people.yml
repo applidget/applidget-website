@@ -38,3 +38,8 @@ fields:
     label: Published
     type: boolean
     localized: true
+- homepage:
+    label: Homepage
+    type: boolean
+    hint: Specifies if the Person appears on the home page
+    localized: true
