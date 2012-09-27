@@ -11,10 +11,10 @@
 
       <div class="container">
         <div class="row">
-          <div class="span4 hidden-phone headshots">
+          <div class="span5 hidden-phone headshots">
             {{ "team-page.png" || theme_image_tag }}
           </div>
-          <div class="span8">
+          <div class="span7">
             <h1>
             {% editable_short_text "people_title", hint: "People Title", priority: 70 %}
               People
@@ -55,25 +55,26 @@
                 <div class="bloc-description">
                   {{ person.body }}
                 </div>
-                
-                @{{ person.twitter_username }}
-                {% if person.twitter_username %}
-                  <a href="http://twitter.com/{{ person.twitter_username}}" class="list-info" target="_blank">
-                    {{ "icon-twitter-medium.png" || theme_image_tag }}
-                  </a>
-                {% endif %}
 
-                {% if person.linkedin_username %}
-                  <a href="http://linkedin.com/{{ person.linkedin_username}}" class="list-info" target="_blank">
-                    {{ "icon-linkedin-medium.png" || theme_image_tag }}
-                  </a>
-                {% endif %}
+                <div class="social-icon-list">
+                  {% if person.twitter_username %}
+                    <a href="http://twitter.com/{{ person.twitter_username}}" target="_blank">
+                      {{ "icon-twitter-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
 
-                {% if person.github_username %}
-                  <a href="http://github.com/{{ person.github_username}}" class="list-info" target="_blank">
-                    {{ "icon-github-medium.png" || theme_image_tag }}
-                  </a>
-                {% endif %}
+                  {% if person.linkedin_profile_url %}
+                    <a href="{{ person.linkedin_profile_url }}" target="_blank">
+                      {{ "icon-linkedin-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
+
+                  {% if person.github_username %}
+                    <a href="http://github.com/{{ person.github_username}}" target="_blank">
+                      {{ "icon-github-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
+                </div>
               </div>
 
               {% if person.picture.url %}

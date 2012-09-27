@@ -23,8 +23,8 @@ fields:
 - twitter_username:
     label: Twitter Username
     type: string
-- linkedin_username:
-    label: LinkedIn Username
+- linkedin_profile_url:
+    label: LinkedIn Profile Url
     type: string
 - github_username:
     label: Github Username
