@@ -143,7 +143,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #section-why-choose,
   #section-technologies,
   #section-event-solutions,
-  #section-team {
+  #section-team,
+  #section-blogs {
     padding-top: 0;
   }
 
@@ -153,18 +154,21 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     }
   }
 
-  #section-team {
+  #section-team,
+  #section-blogs {
     margin-bottom: 0;
-
-    .headshots { 
-      margin-bottom: 0px;
-      text-align: center;
-    }
 
     h1 {
       margin-top: 45px;
       text-align: left;
     }
+  }
+
+  #section-team .headshots, 
+  #section-blogs .blog-pages {
+    padding-top: 0;
+    margin-bottom: 0;
+    text-align: center;
   }
 }
 
@@ -632,7 +636,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
 #main-technologies,
 #main-event-solutions,
-#main-team {
+#main-team,
+#main-blogs {
   padding-top: 40px;
   padding-bottom: 80px;
   text-shadow: none;
@@ -667,6 +672,17 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
   .bloc-title {
     color: #7b27a2;
+  }
+}
+
+#main-blogs {
+  color: #222222;
+  font-size: 100px;
+  line-height: 300px;
+  text-align: center;
+
+  .span12 {
+    border-top: none;
   }
 }
 
@@ -795,7 +811,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
   .header {
     #section-event-solutions,
-    #section-team {
+    #section-team,
+    #section-blogs {
       h1 {
         margin: 0 0 25px;
         text-align: center;
@@ -955,7 +972,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
   #main-technologies,
   #main-event-solutions,
-  #main-team {
+  #main-team,
+  #main-blogs {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;

@@ -1,0 +1,45 @@
+{% extends index %}
+
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron" id="section-blogs">
+      <div class="container dark-menu">
+        {% assign url = 'applidget-logo/green.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="span5 hidden-phone blog-pages">
+            {{ "blogs-pages-icon.png" || theme_image_tag }}
+          </div>
+          <div class="span7">
+            <h1>
+            {% editable_short_text "blogs_title", hint: "Blogs Title", priority: 60 %}
+              Our Blogs
+            {% endeditable_short_text %}
+            </h1>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="main-blogs">
+    <div class="container page">
+
+      <div class="row">
+        <div class="span12">
+          SOON...
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
