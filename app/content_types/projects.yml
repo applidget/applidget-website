@@ -1,6 +1,6 @@
 name: Projects
 description: Contains all the kinds of projects Applidget is able to do
-order_by: title
+order_by: _position
 slug: projects
 label_field_name: title
 fields:
