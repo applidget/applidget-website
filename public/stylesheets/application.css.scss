@@ -1006,7 +1006,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     .picture-right, .picture-left { text-align: center; }
   }
 
-  #main-blogs {
+  /* ID temporary-main-blogs : to be removed when blog page is implemented */
+  #main-blogs, #temporary-main-blogs {
     font-size: 80px;
     line-height: 250px;
   }
@@ -1056,4 +1057,10 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
 @media (max-width: 320px) {
   .inline-to-block { display: block; }
+
+  /* ID temporary-main-blogs : to be removed when blog page is implemented */
+  #main-blogs, #temporary-main-blogs {
+    font-size: 50px;
+    line-height: 150px;
+  }
 }
