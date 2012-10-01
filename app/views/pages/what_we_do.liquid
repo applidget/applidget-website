@@ -23,48 +23,14 @@
 
     {% with_scope published: true %}
 
-      {% for project in contents.projects %}
+      {% for object in contents.projects %}
 
-        <div class="row">
-          <div class="span12">
-
-            {% if project.picture.url %}
-              {% assign classText = "bloc-text" %}
-            {% else %}
-              {% assign classText= "" %}
-            {% endif %}
-            
-            <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
-
-              <div class="bloc-header">
-                {% if project.icon.url %}
-                <span class="bloc-icon">{{ project.icon.url | image_tag }}</span>
-                {% endif %}
-                <span class="bloc-title">{{ project.title }}</span><br />
-                <span class="bloc-subtitle">{{ project.subtitle }}</span>
-              </div>
-
-              <div class="bloc-description">
-                {{ project.body }}
-              </div>
-
-            </div>
-
-            {% if project.picture.url %}
-            <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %}">
-              {{ project.picture.url | image_tag }}
-            </div>
-            {% endif %}
-
-            <div class="clear"></div>
-
-          </div>
-        </div>
+        {% include 'page_content' %}
 
       {% endfor %}
 
     {% endwith_scope %}
-
+    
   </div>
 
 {% endblock %}
