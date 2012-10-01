@@ -473,13 +473,15 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     @include border-radius(0px 0px 4px 4px);
   }
 
-  .active {
-    background-color:#d3d3d3;
-    *background-color:#d3d3d3;
-    @include background-image(linear-gradient(color-stops(#909090, #b1b1b1 15%, #d3d3d3)));
-    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ff909090',endColorstr='#ffd3d3d3',GradientType=0);
-    filter:progid:dximagetransform.microsoft.gradient(enabled=false);
-    background-repeat:repeat-x;
+  .btn-group {
+    .active {
+      background-color:#d3d3d3;
+      *background-color:#d3d3d3;
+      @include background-image(linear-gradient(color-stops(#909090, #b1b1b1 15%, #d3d3d3)));
+      filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ff909090',endColorstr='#ffd3d3d3',GradientType=0);
+      filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+      background-repeat:repeat-x;
+    }
   }
 
   .credits {

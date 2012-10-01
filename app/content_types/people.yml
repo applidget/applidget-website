@@ -16,8 +16,8 @@ fields:
 - picture:
     label: Picture
     type: file
-- position:
-    label: Position
+- title:
+    label: Title
     type: string
     localized: true
 - twitter_username:
