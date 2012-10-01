@@ -72,14 +72,14 @@
         {% with_scope homepage:true, published: true %}
           {% for offer in contents.offers limit:2 %}
             <span class="bloc-section-title team">
-              <a href="{{ locale }}/job-offers#{{ offer._permalink }}">{{ offer.title }}</a>
+              <a href="{{ locale }}/job_offers#{{ offer._permalink }}">{{ offer.title }}</a>
             </span>
             <span class="bloc-section-description">{{ offer.body | truncate:60 }}</span>
           {% endfor %}
         {% endwith_scope %}
 
         <span class="read-more">
-          <a href="{{ locale }}/job-offers">
+          <a href="{{ locale }}/job_offers">
             {% editable_short_text "read_more_title", hint: "Read More", priority: 63 %}
               Read More
             {% endeditable_short_text %}

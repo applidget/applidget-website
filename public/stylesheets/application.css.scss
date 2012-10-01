@@ -142,7 +142,7 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 .header {
   #section-why-choose {
     #main-navbar {
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
   }
 
@@ -213,7 +213,7 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 #main-navbar {
   font-family: 'museo500';
   color: $grey;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-bottom: 20px;
   margin-top: 1em;
 
@@ -237,7 +237,7 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   }
   .link a:after {
     content: "/";
-    margin: 0 0.5em;
+    margin: 0 0.2em;
     color: booken($grey, 50%);
   }
   .link.last a:after {
@@ -558,6 +558,13 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   @include after-before-content('', block, absolute, url('/images/dented-blogs.png') repeat-x top left, -5px, 0, 0, 0);
 }
 
+#section-job-offers {
+  h1 {
+    color: #555;
+    text-shadow: 1px 1px 3px #FFFFFF;
+  }
+}
+
 #section-footer {
   background: #cccccc;
   color: #3d3d3d;
@@ -651,7 +658,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 #main-technologies,
 #main-event-solutions,
 #main-team,
-#main-blogs {
+#main-blogs,
+#main-job-offers {
   padding-top: 40px;
   padding-bottom: 80px;
   text-shadow: none;
@@ -672,7 +680,9 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
 
 #main-event-solutions {
   background-color: #EAE4D6;
+}
 
+#main-event-solutions, #main-job-offers {
   .bloc-title {
     color: #DE0605;
   }
@@ -687,6 +697,10 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   .bloc-title {
     color: #7b27a2;
   }
+}
+
+#main-job-offers {
+  border-top: 0;
 }
 
 /* ID temporary-main-blogs : to be removed when blog page is implemented */
@@ -837,7 +851,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   .header {
     #section-event-solutions,
     #section-team,
-    #section-blogs {
+    #section-blogs,
+    #section-job-offers {
       h1 {
         margin: 0 0 25px;
         text-align: center;
@@ -998,7 +1013,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #main-technologies,
   #main-event-solutions,
   #main-team,
-  #main-blogs {
+  #main-blogs,
+  #main-job-offers {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;

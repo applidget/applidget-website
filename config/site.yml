@@ -17,6 +17,8 @@ site:
       published: true
     - "team":
       published: true
+    - "job_offers":
+      published: true
     - "blogs":
       published: true
     - "404":
