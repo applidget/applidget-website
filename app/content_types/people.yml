@@ -1,6 +1,6 @@
 name: People
 description: Contains the Applidget team
-order_by: full_name
+order_by: _position
 slug: people
 label_field_name: full_name
 fields:
