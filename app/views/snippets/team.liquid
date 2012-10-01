@@ -69,13 +69,22 @@
           {% endeditable_short_text %}
         </span>
 
-        <!-- This content is supposed to be loaded from a collection in the end -->
-        <span class="bloc-section-title team">Some Designer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        {% with_scope homepage:true, published: true %}
+          {% for offer in contents.offers limit:2 %}
+            <span class="bloc-section-title team">
+              <a href="{{ locale }}/job-offers#{{ offer._permalink }}">{{ offer.title }}</a>
+            </span>
+            <span class="bloc-section-description">{{ offer.body | truncate:60 }}</span>
+          {% endfor %}
+        {% endwith_scope %}
 
-        <span class="bloc-section-title team">HTML5 Developer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-        <!-- End content -->
+        <span class="read-more">
+          <a href="{{ locale }}/job-offers">
+            {% editable_short_text "read_more_title", hint: "Read More", priority: 63 %}
+              Read More
+            {% endeditable_short_text %}
+          </a>
+        </span>
       </div>
     </div>
   </div>
