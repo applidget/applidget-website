@@ -1,0 +1,36 @@
+{% extends index %}
+
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron" id="section-event-solutions">
+      <div class="container">
+        {% assign url = 'applidget-logo/orange.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      {% assign show_content = false %}
+      {% include 'event_solutions' %}
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="main-event-solutions">
+    <div class="container page">
+
+      {% with_scope published: true %}
+
+        {% for object in contents.solutions %}
+
+          {% include 'page_content' %}
+
+        {% endfor %}
+
+      {% endwith_scope %}
+    </div>
+  </div>
+
+{% endblock %}

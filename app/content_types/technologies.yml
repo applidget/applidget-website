@@ -1,6 +1,6 @@
 name: Technologies
 description: Contains every technology Applidget is using
-order_by: name
+order_by: _position
 slug: technologies
 label_field_name: name
 fields:
@@ -18,7 +18,7 @@ fields:
     label: Body
     type: text
     text_formatting: html
-    hint: The description of the description
+    hint: The description of the technology
     localized: true
 - picture:
     label: Picture

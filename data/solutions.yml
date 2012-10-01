@@ -1,0 +1,25 @@
+MobiCheckin:
+  subtitle: L'accueil simple et élégant de vos invités!
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br />
+        Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.
+        <br /><br />
+        Quam ob rem cave Catoni anteponas ne istum quidem ipsum, quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta, illius dicta laudantur. De me autem, ut iam cum utroque vestrum loquar, sic habetote.
+  picture: /images/illustration_7.png
+  published: true
+  link_url: http://www.mobicheckin.com
+  link_text: Visit Website
+  home_page: true
+MobiNetwork:
+  subtitle: Application de Networking pour les exposants.
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  picture: /images/illustration_8.png
+  published: true
+  home_page: true
+Mobiloc:
+  subtitle: Location d'Ipad et Ipod Touch pour vos événements.
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  published: true
+  link_url: http://www.mobiloc.fr
+  link_text: Visit Website
+  home_page: false
