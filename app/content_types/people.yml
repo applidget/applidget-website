@@ -1,6 +1,6 @@
 name: People
 description: Contains the Applidget team
-order_by: full_name
+order_by: _position
 slug: people
 label_field_name: full_name
 fields:
@@ -16,8 +16,8 @@ fields:
 - picture:
     label: Picture
     type: file
-- position:
-    label: Position
+- title:
+    label: Title
     type: string
     localized: true
 - twitter_username:
