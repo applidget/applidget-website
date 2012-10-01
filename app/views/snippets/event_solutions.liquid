@@ -74,16 +74,20 @@
           You will attend
         {% endeditable_short_text %}
       </span>
-      <span class="info yes">
-        {% editable_short_text "attend_yes", hint: "Yes", priority: 74 %}
-          Yes
-        {% endeditable_short_text %}
-      </span>
-      <span class="info maybe">
-        {% editable_short_text "attend_maybe", hint: "Maybe", priority: 73 %}
-          Maybe
-        {% endeditable_short_text %}
-      </span>
+
+      <div class="btn-group" data-toggle="buttons-radio">
+        <button type="button" class="btn info yes active">
+          {% editable_short_text "attend_yes", hint: "Yes", priority: 74 %}
+            Yes
+          {% endeditable_short_text %}
+        </button>
+        <button type="button" class="btn info maybe">
+          {% editable_short_text "attend_maybe", hint: "Maybe", priority: 73 %}
+            Maybe
+          {% endeditable_short_text %}
+        </button>
+      </div>
+
       <span class="info credits">
         {% editable_short_text "powered_text", hint: "Powered by Applidget", priority: 72 %}
           Organized by Someone<br />

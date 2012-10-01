@@ -405,19 +405,20 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   }
 
   .info {
-    display: inline-block;
+    display: block;
     margin-bottom: 6px;
     width: 100%;
     text-align: center;
     height: 65px;
-    line-height: 65px;
-    font-size: 1.4em;
   }
 
-  .credits {
-    line-height: 27px;
-    font-size: 0.9em;
-    color: #707070;
+  .btn-group > .btn + .btn {
+    margin-left: 0;
+    
+  }
+
+  .btn-group > .btn {
+    margin-bottom: -1px;
   }
 
   .success {
@@ -425,17 +426,25 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     border: 1px solid #acd866;
     @include border-radius(4px);
     color: #579839;
-    
+    font-size: 1.4em;
+    line-height: 65px;  
   }
 
   .yes, .maybe {
     color: #707070;
     border: 1px solid #909090;
+    font-size: 22px;
   }
 
   .yes {
-    margin-bottom: -1px;
     @include border-radius(4px 4px 0px 0px);
+  }
+
+  .maybe {
+    @include border-radius(0px 0px 4px 4px);
+  }
+
+  .active {
     background-color:#d3d3d3;
     *background-color:#d3d3d3;
     @include background-image(linear-gradient(color-stops(#909090, #b1b1b1 15%, #d3d3d3)));
@@ -444,14 +453,11 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     background-repeat:repeat-x;
   }
 
-  .maybe {
-    @include border-radius(0px 0px 4px 4px);
-    background-color:#eeeeee;
-    *background-color:#eeeeee;
-    @include background-image(linear-gradient(color-stops(#eeeeee, #e5e5e5)));
-    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffeeeeee',endColorstr='#ffe5e5e5',GradientType=0);
-    filter:progid:dximagetransform.microsoft.gradient(enabled=false);
-    background-repeat:repeat-x;
+  .credits {
+    line-height: 27px;
+    font-size: 0.9em;
+    color: #707070;
+    margin-top: 6px;
   }
 }
 
@@ -633,6 +639,28 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #main-event-solutions {
     margin-top: 0;
   }
+
+  #section-event-solutions {
+    .info {
+      height: 50px;
+      margin-bottom: 4px;
+    }
+
+    .success {
+      font-size: 1.2em;
+      line-height: 50px;
+    }
+
+    .btn-group .btn {
+      font-size: 18px;
+    }
+
+    .credits {
+      font-size: 0.8em;
+      line-height: 19px;
+      margin-top: 5px;
+    }
+  }
 }
 
 @media(min-width: 980px) {
@@ -703,19 +731,6 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
         margin-left: 10px;
         width: 21px;
       }
-    }
-
-    .info {
-      font-size: 1.2em;
-      height: 50px;
-      line-height: 50px;
-      margin-bottom: 4px;
-    }
-
-    .credits {
-      font-size: 0.8em;
-      line-height: 19px;
-      margin-top: 5px;
     }
 
     .yes {
@@ -863,21 +878,21 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
       left: 0;
     }
 
-    .info {
-      font-size: 1.2em;
-      height: 50px;
-      line-height: 50px;
-      margin-bottom: 4px;
+    .btn-group .btn {
+      display: inline-block;
+      width: 50%;
     }
 
-    .credits {
-      font-size: 0.8em;
-      line-height: 19px;
-      margin-top: 5px;
+    .btn-group > .btn + .btn {
+      margin-left: -1px;
     }
 
     .yes {
-      margin-bottom: -1px;
+      @include border-radius(4px 0 0 4px);
+    }
+
+    .maybe {
+      @include border-radius(0 4px 4px 0);
     }
   }
 
