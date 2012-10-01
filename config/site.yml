@@ -15,5 +15,7 @@ site:
       published: true
     - "event_solutions":
       published: true
+    - "team":
+      published: true
     - "404":
       published: true
