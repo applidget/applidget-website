@@ -1,6 +1,6 @@
 name: Solutions
 description: Contains every event solution Applidget is offering
-order_by: name
+order_by: _position
 slug: solutions
 label_field_name: name
 fields:
