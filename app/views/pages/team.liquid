@@ -1,0 +1,97 @@
+{% extends index %}
+
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron" id="section-team">
+      <div class="container dark-menu">
+        {% assign url = 'applidget-logo/purple.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="span5 hidden-phone headshots">
+            {{ "team-page.png" || theme_image_tag }}
+          </div>
+          <div class="span7">
+            <h1>
+            {% editable_short_text "people_title", hint: "People Title", priority: 70 %}
+              People
+            {% endeditable_short_text %}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron" id="main-team">
+    <div class="container page">
+
+      {% with_scope published: true %}
+
+        {% for person in contents.people %}
+
+          <div class="row" id="{{ person._permalink }}">
+            <div class="span12">
+
+              {% if person.picture.url %}
+                {% assign classText = "bloc-text" %}
+              {% else %}
+                {% assign classText= "" %}
+              {% endif %}
+
+              <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
+                <div class="bloc-header">
+                  <span class="bloc-title">{{ person.full_name }}</span><br />
+                  <span class="bloc-subtitle">{{ person.title }}</span>
+                </div>
+
+                <div class="bloc-description">
+                  {{ person.body }}
+                </div>
+
+                <div class="social-icon-list">
+                  {% if person.twitter_username %}
+                    <a href="http://twitter.com/{{ person.twitter_username}}" target="_blank">
+                      {{ "icon-twitter-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
+
+                  {% if person.linkedin_profile_url %}
+                    <a href="{{ person.linkedin_profile_url }}" target="_blank">
+                      {{ "icon-linkedin-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
+
+                  {% if person.github_username %}
+                    <a href="http://github.com/{{ person.github_username}}" target="_blank">
+                      {{ "icon-github-medium.png" || theme_image_tag }}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+
+              {% if person.picture.url %}
+              <div class="bloc-illustration large-border {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
+                {{ person.picture.url | image_tag }}
+              </div>
+              {% endif %}
+
+              <div class="clear"></div>
+
+            </div>
+          </div>
+
+        {% endfor %}
+
+      {% endwith_scope %}
+    </div>
+  </div>
+
+{% endblock %}

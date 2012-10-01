@@ -1,0 +1,45 @@
+name: People
+description: Contains the Applidget team
+order_by: _position
+slug: people
+label_field_name: full_name
+fields:
+- full_name:
+    label: Full Name
+    type: string
+- body:
+    label: Body
+    type: text
+    text_formatting: html
+    hint: The description of the person
+    localized: true
+- picture:
+    label: Picture
+    type: file
+- title:
+    label: Title
+    type: string
+    localized: true
+- twitter_username:
+    label: Twitter Username
+    type: string
+- linkedin_profile_url:
+    label: LinkedIn Profile Url
+    type: string
+- github_username:
+    label: Github Username
+    type: string
+- category:
+    label: Category
+    type: string
+    localized: true
+    hint: The main job of the person (Associate / Developer / Marketing / ...)
+- published:
+    label: Published
+    type: boolean
+    localized: true
+- homepage:
+    label: Homepage
+    type: boolean
+    hint: Specifies if the Person appears on the home page
+    localized: true
