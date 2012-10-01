@@ -1,13 +1,13 @@
 name: Projects
 description: Contains all the kinds of projects Applidget is able to do
-order_by: title
+order_by: _position
 slug: projects
-label_field_name: title
+label_field_name: name
 fields:
-- title:
-    label: Title
+- name:
+    label: Name
     type: string
-    hint: The title of the kind of project
+    hint: The name of the kind of project
     localized: true
 - subtitle:
     label: Subtitle

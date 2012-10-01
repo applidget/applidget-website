@@ -1,0 +1,40 @@
+<div class="row" id="{{ object._permalink }}">
+  <div class="span12">
+
+    {% if object.picture.url %}
+      {% assign classText = "bloc-text" %}
+    {% else %}
+      {% assign classText= "" %}
+    {% endif %}
+    
+    <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
+
+      <div class="bloc-header">
+        {% if object.icon.url %}
+        <span class="bloc-icon">{{ object.icon.url | image_tag }}</span>
+        {% endif %}
+        <span class="bloc-title">{{ object.name }}</span><br />
+        <span class="bloc-subtitle">{{ object.subtitle }}</span>
+      </div>
+
+      <div class="bloc-description">
+        {{ object.body }}
+      </div>
+
+      <div class="bloc-buttons">
+      {% if object.link_url %}
+        <a href="{{ object.link_url}}" class="btn btn-large btn-danger" target="_blank">{{ object.link_text }}</a>
+      {% endif %}
+      </div>
+    </div>
+
+    {% if object.picture.url %}
+    <div class="bloc-illustration {% cycle 'picture_style': 'picture-right', 'picture-left' %} center">
+      {{ object.picture.url | image_tag }}
+    </div>
+    {% endif %}
+
+    <div class="clear"></div>
+
+  </div>
+</div>
