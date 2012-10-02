@@ -1,0 +1,44 @@
+{% extends index %}
+
+{% block 'header' %}
+
+  <div class="header">
+    <div class="jumbotron main-header">
+      <div class="container">
+        {% assign url = 'applidget-logo/red.png' %}
+        {% include 'topmenu' %}
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h1>
+            {% editable_short_text "page_title", hint: "Page Title", priority: 100 %}
+              Page Title
+            {% endeditable_short_text %}
+            </h1>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block 'main' %}
+
+  <div class="jumbotron main-content">
+    <div class="container page">
+
+      <div class="row">
+        <div class="span12">
+          {% editable_long_text "page_content", hint: "Page Content", priority: 50 %}
+            Page Content
+          {% endeditable_long_text %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

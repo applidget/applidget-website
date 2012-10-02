@@ -23,6 +23,8 @@
 
       {% for object in contents.projects %}
 
+        {% assign icon = true %}
+        {% assign link_url = false %}
         {% include 'page_content' %}
 
       {% endfor %}

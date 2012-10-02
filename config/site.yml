@@ -17,7 +17,12 @@ site:
       published: true
     - "team":
       published: true
+    - "offers":
+      published: true
     - "blogs":
       published: true
+    - "template":
+      published: false
+      listed: false
     - "404":
       published: true
