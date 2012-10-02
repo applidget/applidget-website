@@ -46,36 +46,59 @@
     <div class="span4 info-bloc">
       <div class="padded">
         <span class="bloc-title">
-          {% editable_short_text "join_us_title", hint: "Join Us Title", priority: 66 %}
+          {% editable_short_text "join_us", hint: "Join Us", priority: 66 %}
             Join Us
           {% endeditable_short_text %}
         </span>
 
-        <!-- This content is supposed to be loaded from a collection in the end -->
-        <span class="bloc-section-title team">UI/UX Designer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        <span class="bloc-section-title team">
+          {% editable_short_text "join_us_title_1", hint: "Join Us Title 1", priority: 65 %}
+            Title 1
+          {% endeditable_short_text %}
+        </span>
+        <span class="bloc-section-description">
+          {% editable_short_text "join_us_description_1", hint: "Join Us Description 1", priority: 64 %}
+            Description 1
+          {% endeditable_short_text %}
+        </span>
 
-        <span class="bloc-section-title team">Ruby Developer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-        <!-- End content -->
+        <span class="bloc-section-title team">
+          {% editable_short_text "join_us_title_2", hint: "Join Us Title 2", priority: 63 %}
+            Title 2
+          {% endeditable_short_text %}
+        </span>
+        <span class="bloc-section-description">
+          {% editable_short_text "join_us_description_2", hint: "Join Us Description 2", priority: 62 %}
+            Description 2
+          {% endeditable_short_text %}
+        </span>
       </div>
     </div>
 
     <div class="span4 info-bloc">
       <div class="padded">
         <span class="bloc-title">
-          {% editable_short_text "last_open_positions_title", hint: "Last Open Positions Title", priority: 64 %}
+          {% editable_short_text "last_open_positions", hint: "Last Open Positions", priority: 61 %}
             Last Open Positions
           {% endeditable_short_text %}
         </span>
 
-        <!-- This content is supposed to be loaded from a collection in the end -->
-        <span class="bloc-section-title team">Some Designer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        {% with_scope homepage:true, published: true %}
+          {% for offer in contents.offers limit:2 %}
+            <span class="bloc-section-title team">
+              <a href="{{ locale }}/offers/{{ offer._permalink }}">{{ offer.title }}</a>
+            </span>
+            <span class="bloc-section-description">{{ offer.body | truncate:60 }}</span>
+          {% endfor %}
+        {% endwith_scope %}
 
-        <span class="bloc-section-title team">HTML5 Developer</span>
-        <span class="bloc-section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-        <!-- End content -->
+        <span class="read-more">
+          <a href="{{ locale }}/offers">
+            {% editable_short_text "read_more_title", hint: "Read More", priority: 60 %}
+              Read More
+            {% endeditable_short_text %}
+          </a>
+        </span>
       </div>
     </div>
   </div>

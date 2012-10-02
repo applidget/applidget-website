@@ -88,6 +88,33 @@
   }
 }
 
+.jumbotron.main-header {
+  padding-top: 0;
+
+  h1 {
+    color: #555;
+    text-shadow: 1px 1px 3px #FFFFFF;
+  }
+}
+
+.jumbotron.main-content {
+  background: url('/images/gradient-background-glow.png') repeat-y top center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-shadow: none;
+  color: #555;
+}
+
+.jumbotron.main-header {
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.jumbotron.main-content:before {
+  @include after-before-content("", block, absolute, url('/images/shadow-up.png') no-repeat top center, -15px, 0, 0, 0);
+}
+
 .jumbotron:after {
   content: '';
   display: block;
@@ -145,6 +172,12 @@
       }
     }
   }
+
+  .jumbotron.main-header {
+    h1 {
+      margin-bottom:45px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -166,6 +199,12 @@
       }
     }
   }
+
+  .jumbotron.main-header {
+    h1 {
+      margin-bottom:40px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -181,5 +220,16 @@
     p, .btn-huge {
       font-size: 20px;
     }
+  }
+
+  .jumbotron.main-header {
+    h1 {
+      margin-bottom:55px;
+    }
+  }
+
+  .jumbotron.main-content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
