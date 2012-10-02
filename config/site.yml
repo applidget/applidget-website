@@ -17,8 +17,12 @@ site:
       published: true
     - "team":
       published: true
-    - "job_offers":
+    - "offers":
       published: true
+    - offers/content_type_template:
+      templatized: true
+      published: true
+      model: offers
     - "blogs":
       published: true
     - "404":
