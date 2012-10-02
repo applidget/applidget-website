@@ -21,5 +21,8 @@ site:
       published: true
     - "blogs":
       published: true
+    - "template":
+      published: false
+      listed: false
     - "404":
       published: true
