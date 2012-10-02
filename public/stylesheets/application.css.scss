@@ -150,7 +150,8 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   #section-technologies,
   #section-event-solutions,
   #section-team,
-  #section-blogs {
+  #section-blogs,
+  #section-job-offers {
     padding-top: 0;
   }
 
@@ -699,10 +700,6 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   }
 }
 
-#main-job-offers {
-  border-top: 0;
-}
-
 /* ID temporary-main-blogs : to be removed when blog page is implemented */
 #main-blogs, #temporary-main-blogs {
   color: #222222;
@@ -743,6 +740,11 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
       line-height: 19px;
       margin-top: 5px;
     }
+  }
+
+  .header > div {
+      margin-top: 0;
+    
   }
 }
 
@@ -838,7 +840,7 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
     }
 
     .bloc-buttons {
-       margin-bottom: 25px;
+      margin-bottom: 25px;
       text-align: center;
     }
 
@@ -851,8 +853,7 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   .header {
     #section-event-solutions,
     #section-team,
-    #section-blogs,
-    #section-job-offers {
+    #section-blogs {
       h1 {
         margin: 0 0 25px;
         text-align: center;

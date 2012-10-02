@@ -3,7 +3,7 @@
 {% block 'header' %}
 
   <div class="header">
-    <div class="jumbotron" id="section-job-offers">
+    <div class="jumbotron main-header" id="section-job-offers">
       <div class="container">
         {% assign url = 'applidget-logo/red.png' %}
         {% include 'topmenu' %}
@@ -27,7 +27,7 @@
 
 {% block 'main' %}
 
-  <div class="jumbotron" id="main-job-offers">
+  <div class="jumbotron main-content" id="main-job-offers">
     <div class="container page">
 
       {% with_scope published: true %}
