@@ -25,6 +25,8 @@
 
         {% for object in contents.solutions %}
 
+          {% assign icon = false %}
+          {% assign link_url = true %}
           {% include 'page_content' %}
 
         {% endfor %}

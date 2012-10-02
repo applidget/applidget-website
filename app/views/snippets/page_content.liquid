@@ -10,7 +10,7 @@
     <div class="{{ classText }} {% cycle 'text_style': 'pull-left', 'pull-right' %}">
 
       <div class="bloc-header">
-        {% if object.icon.url %}
+        {% if icon && object.icon.url %}
         <span class="bloc-icon">{{ object.icon.url | image_tag }}</span>
         {% endif %}
         <span class="bloc-title">{{ object.name }}</span><br />
@@ -22,7 +22,7 @@
       </div>
 
       <div class="bloc-buttons">
-      {% if object.link_url %}
+      {% if object.link_url && link_url %}
         <a href="{{ object.link_url}}" class="btn btn-large btn-danger" target="_blank">{{ object.link_text }}</a>
       {% endif %}
       </div>
