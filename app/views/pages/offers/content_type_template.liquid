@@ -1,0 +1,29 @@
+{% extends parent %}
+
+{% block 'main' %}
+
+  <div class="jumbotron main-content" id="main-job-offers">
+    <div class="container page">
+      <div class="row" id="{{ offer._permalink }}">
+        <div class="span12">
+          <div class="bloc-header">
+            <span class="bloc-title">{{ offer.title }}</span>
+          </div>
+          
+          <div class="bloc-description">
+            {{ offer.body }}
+          </div>
+          
+          <div class="bloc-buttons">
+            <a href="/{{ locale }}/offers" class="btn btn-large btn-danger">
+              {% editable_short_text "all_offers_title", hint: "All Offers Button", priority: 50 %}
+                All Offers
+              {% endeditable_short_text %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

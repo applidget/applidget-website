@@ -19,10 +19,15 @@ site:
       published: true
     - "offers":
       published: true
+    - offers/content_type_template:
+      templatized: true
+      published: true
+      model: offers
+      title: Template of an offer
     - "blogs":
       published: true
     - "inner":
-      title: "Inner Page"
+      title: Inner Page
       published: false
       listed: false
     - "404":
