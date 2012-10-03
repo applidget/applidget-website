@@ -21,7 +21,8 @@ site:
       published: true
     - "blogs":
       published: true
-    - "template":
+    - "inner":
+      title: "Inner Page"
       published: false
       listed: false
     - "404":
