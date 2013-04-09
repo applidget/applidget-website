@@ -1,6 +1,6 @@
 name: applidget-website
 
-locales: [en, fr]
+locales: [fr]
 
 seo_title: Applidget - We make Web and Mobile Apps
 meta_description: "Applidget is an Paris-based agency, specialized with Ruby on Rails, HTML5, iOS, Android development."
