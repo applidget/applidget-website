@@ -1,18 +1,18 @@
-Online App:
-  subtitle: Nous faisons des applications en ligne
-  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  picture: /images/illustration_1.png
-  icon: /images/icon-imac-medium.png
-  published: true
-iPhone App:
-  subtitle: Excepteur sint occaecat cupidatat.
-  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  picture: /images/illustration_2.png
-  icon: /images/icon-iphone-medium.png
-  published: true
-iPad App:
-  subtitle: Duis aute irure dolor in.
-  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  picture: /images/illustration_3.png
-  icon: /images/icon-ipad-medium.png
-  published: true
+- Online App:
+    subtitle: Nous faisons des applications en ligne
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    picture: /images/illustration_1.png
+    icon: /images/icon-imac-medium.png
+    published: true
+- iPhone App:
+    subtitle: Excepteur sint occaecat cupidatat.
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    picture: /images/illustration_2.png
+    icon: /images/icon-iphone-medium.png
+    published: true
+- iPad App:
+    subtitle: Duis aute irure dolor in.
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    picture: /images/illustration_3.png
+    icon: /images/icon-ipad-medium.png
+    published: true
