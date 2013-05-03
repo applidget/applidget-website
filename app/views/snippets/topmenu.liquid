@@ -10,7 +10,9 @@
         {{url | theme_image_tag: "alt:Applidget" }}
       </a>
       <div class="nav-collapse collapse">
-        {% nav site, class: 'nav', active_class: 'active', bootstrap: true %}
+        <ul id="nav" class="nav">
+          {% nav site, no_wrapper: true, active_class: 'active', bootstrap: true %}
+        </ul>
       </div>
     </div>
   </div>
