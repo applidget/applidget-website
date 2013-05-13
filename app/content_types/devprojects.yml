@@ -1,0 +1,34 @@
+name: Development Projects
+description: Contains all development projects
+order_by: _position
+slug: devprojects
+label_field_name: name
+fields:
+- title:
+    label: Title
+    type: string
+    hint: Project title
+    localized: true
+- client:
+    label: Client
+    type: string
+    hint: Client name
+    localized: true
+- type:
+    label: Type
+    type: string
+    hint: Project's type
+    localized: true
+- thumbnail:
+    label: Thumbnail
+    type: file
+    hint: Project's thumbnail
+- description:
+    label: Description
+    type: text
+    text_formatting: html
+    hint: Project's description (include image here)
+- published:
+    label: Published
+    type: boolean
+    localized: true
