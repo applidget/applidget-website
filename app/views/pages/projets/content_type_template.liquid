@@ -1,0 +1,28 @@
+---
+templatized: true
+published: true
+content_type: projects
+title: "Template of a dev project"
+---
+
+{% extends index %}
+
+{% block 'main' %}
+
+  <div class="jumbotron main-content" id="project">
+    <div class="container page">
+      <div class="row">
+        <div class="span12">
+          <h1>{{ project.title }}</h1>
+          <h2>
+            {{ project.client }} - {{ project.type }}
+          </h2>
+          <div class="description">
+            {{ project.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

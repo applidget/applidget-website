@@ -30,7 +30,7 @@ published: true
     <ul class="row">
 
       {% with_scope published: true %}
-        {% for object in contents.projets %}
+        {% for object in contents.projects %}
           <li class="span4">
             <a href="/projets/{{ object._permalink }}">
               {{ object.thumbnail.url | image_tag }}
