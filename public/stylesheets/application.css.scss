@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "base";
 @import "stickers-sprite.css.scss";
 @import "jumbotron.css.scss";
@@ -1082,11 +1083,63 @@ $icon-medium-classes-list: (mobinetwork, mobicheckin, social-networks, suitcase,
   }
 }
 
-// development project page
+/* development project page */
 #section-development-project {
   padding-bottom: 50px;
   color: #464646;
   line-height: 23px;
   text-shadow: 1px 1px 0px #FFF;
   font-size: 0.9em;
+
+  div.introduction {
+    img {
+      border-radius: 3px;
+    }
+  }
+}
+
+#development-project-list {
+  padding-top:50px;
+
+  ul {
+    li {
+      margin-bottom: 60px;
+      
+      a {
+        img {
+          border-radius: 3px;
+        }
+      
+        p {
+          text-align: center;
+          margin-top: 20px;
+          color: #000000;
+        }
+      }  
+    }
+  }
+}
+
+#project {
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  div.description {
+    p {
+      line-height: 1.3em;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
 }

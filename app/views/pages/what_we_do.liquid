@@ -1,5 +1,5 @@
 ---
-title: "What we do"
+title: "Agence"
 published: true
 ---
 
@@ -22,20 +22,20 @@ published: true
 
 {% block 'main' %}
 
-  <div class="container page" id="main-why-choose">
+  <div class="jumbotron" id="main-technologies">
+    <div class="container page">
 
-    {% with_scope published: true %}
+      {% with_scope published: true %}
+        {% for object in contents.technologies %}
 
-      {% for object in contents.projects %}
+          {% assign icon = false %}
+          {% assign link_url = false %}
+          {% include 'page_content' %}
 
-        {% assign icon = true %}
-        {% assign link_url = false %}
-        {% include 'page_content' %}
+        {% endfor %}
+      {% endwith_scope %}
 
-      {% endfor %}
-
-    {% endwith_scope %}
-
+    </div>
   </div>
 
 {% endblock %}

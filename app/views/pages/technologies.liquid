@@ -1,5 +1,5 @@
 ---
-title: "Technologies"
+title: "Portfolio"
 published: true
 ---
 
@@ -26,23 +26,23 @@ published: true
     {% include 'technologies_description' %}
   </div>
 
-  <div class="jumbotron" id="main-technologies">
-    <div class="container page">
+  <div class="container page" id="development-project-list">
+    <ul class="row">
 
       {% with_scope published: true %}
-
-        {% for object in contents.technologies %}
-
-          {% assign icon = false %}
-          {% assign link_url = false %}
-          {% include 'page_content' %}
-
+        {% for object in contents.projets %}
+          <li class="span4">
+            <a href="/projets/{{ object._permalink }}">
+              {{ object.thumbnail.url | image_tag }}
+              <p>{{ object.title }} - {{ object.type }}</p>
+            </a>
+          </li>
         {% endfor %}
-
       {% endwith_scope %}
 
-    </div>
+    <ul>
   </div>
+
 
 {% endblock %}
 
