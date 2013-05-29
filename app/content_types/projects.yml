@@ -1,33 +1,33 @@
 name: Projects
-description: Contains all the kinds of projects Applidget is able to do
+description: Contains all development projects
 order_by: _position
 slug: projects
-label_field_name: name
+label_field_name: title
 fields:
-- name:
-    label: Name
+- title:
+    label: Title
     type: string
-    hint: The name of the kind of project
+    hint: Project title
     localized: true
-- subtitle:
-    label: Subtitle
+- client:
+    label: Client
     type: string
-    hint: The subtitle of these projects
+    hint: Client name
     localized: true
-- body:
-    label: Body
+- type:
+    label: Type
+    type: string
+    hint: Project's type
+    localized: true
+- thumbnail:
+    label: Thumbnail
+    type: file
+    hint: Project's thumbnail
+- description:
+    label: Description
     type: text
     text_formatting: html
-    hint: The description of these projects
-    localized: true
-- picture:
-    label: Picture
-    type: file
-    hint: The illustration of the project
-- icon:
-    label: Icon
-    type: file
-    hint: The icon of the project
+    hint: Project's description (include image here)
 - published:
     label: Published
     type: boolean
