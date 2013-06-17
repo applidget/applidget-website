@@ -1,11 +1,12 @@
 ---
 templatized: true
 published: true
+listed: false
 content_type: offers
 title: "Template of an offer"
 ---
 
-{% extends parent %}
+{% extends index %}
 
 {% block 'main' %}
 
@@ -22,7 +23,7 @@ title: "Template of an offer"
           </div>
           
           <div class="bloc-buttons">
-            <a href="/{{ locale }}/offers" class="btn btn-large btn-danger">
+            <a href="/offres-emploi" class="btn btn-large btn-danger">
               {% editable_short_text "all_offers_title", hint: "All Offers Button", priority: 50 %}
                 All Offers
               {% endeditable_short_text %}
